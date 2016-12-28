@@ -12,6 +12,5 @@
 
 <style lang="scss">
 	#state-home{
-		background: red;
 	}	
 </style>
