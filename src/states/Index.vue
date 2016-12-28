@@ -8,9 +8,9 @@
 
 				<ul id="menu">
 					<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
-					<li><a href="">Xbox</a></li>
-					<li><a href="">Play</a></li>
-					<li><a href="">Pc</a></li>
+					<li v-for="item in menu" @click="closeMenu">
+						<router-link :to="item.to" exact>{{ item.name }}</router-link>
+					</li>
 				</ul>
 			</div>
 		</header>
@@ -33,6 +33,17 @@
 
 <script>
 	export default {
+		data () {
+			return {
+				menu: [
+					{to:'/',name: 'Inicio'},
+					{to:'/xbox',name: 'Xbox'},
+					{to:'/play',name: 'Play'},
+					{to:'/pc',name: 'Pc'}
+				],
+			}
+		},
+
 		methods:{
 			openMenu(){
 				var menu =  document.getElementById('menu');
@@ -83,7 +94,7 @@
 						transition: all 0.4s ease;
 
 					}
-					a:hover{
+					a:hover, .router-link-active{
 						background: rgba(0,0,0,0.5);
 					}
 				}
