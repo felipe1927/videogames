@@ -3,10 +3,11 @@
 		<!-- cabecera -->
 		<header>
 			<div class="container">
-				<p><span class="glyphicon glyphicon-menu-hamburger"></span></p>
+				<p @click="openMenu"><span class="glyphicon glyphicon-menu-hamburger"></span></p>
 				<p>Logo</p>
 
-				<ul>
+				<ul id="menu">
+					<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
 					<li><a href="">Xbox</a></li>
 					<li><a href="">Play</a></li>
 					<li><a href="">Pc</a></li>
@@ -32,7 +33,16 @@
 
 <script>
 	export default {
-
+		methods:{
+			openMenu(){
+				var menu =  document.getElementById('menu');
+				menu.style.left = 0;
+			},
+			closeMenu(){
+				var menu =  document.getElementById('menu');
+				menu.style.left = '-230px';
+			}
+		}
 	}	
 </script>
 
@@ -58,6 +68,7 @@
 				float: right;
 				list-style: none;
 				text-align: right;
+				transition: all 0.5s ease;
 				li{
 					display: inline-block;
 					a{
@@ -70,6 +81,9 @@
 						box-sizing: border-box;
 
 					}
+				}
+				li:nth-child(1){
+					display: none;
 				}
 			}
 		}
@@ -100,6 +114,13 @@
 						a{
 							width: 100%;
 						}
+					}
+					li:nth-child(1){
+						display: block;
+						padding: 15px;
+						-webkit-box-sizing: border-box;
+						-moz-box-sizing: border-box;
+						box-sizing: border-box;	
 					}
 				}
 			}
