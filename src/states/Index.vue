@@ -61,7 +61,7 @@
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
 			}
-			ul{
+			#menu{
 				margin: 0;
 				padding: 0;
 				width: 50%;
@@ -80,7 +80,11 @@
 						-webkit-box-sizing: border-box;
 						-moz-box-sizing: border-box;
 						box-sizing: border-box;
+						transition: all 0.4s ease;
 
+					}
+					a:hover{
+						background: rgba(0,0,0,0.5);
 					}
 				}
 				li:nth-child(1){
@@ -101,8 +105,9 @@
 					display: block;
 					cursor: pointer;
 				}
-				ul{
+				#menu{
 					top: 0;
+					// overflow-y: scroll;
 					padding: 0;
 					left: -250px;
 					width: 230px;
@@ -128,6 +133,7 @@
 					}
 				}
 			}
+			
 		}
 		
 
