@@ -1,0 +1,128 @@
+<template>
+	<header>
+
+		<div class="container">
+			<p @click="openMenu"><span class="glyphicon glyphicon-menu-hamburger"></span></p>
+			<p>Logo</p>
+
+			<ul id="menu">
+				<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
+				
+				<li v-for="item in menu" @click="closeMenu">
+					<router-link :to="item.to" exact>{{ item.name }}</router-link>
+				</li>
+			</ul>
+		</div>
+
+	</header>
+</template>
+
+<script>
+	export default{
+		data () {
+			return {
+				menu: [
+					{to:'/',name: 'Inicio'},
+					{to:'/xbox',name: 'Xbox'},
+					{to:'/play',name: 'Play'},
+					{to:'/pc',name: 'Pc'}
+				],
+			}
+		},
+
+		methods:{
+			openMenu(){
+				var menu =  document.getElementById('menu');
+				menu.style.left = 0;
+			},
+			closeMenu(){
+				var menu =  document.getElementById('menu');
+				menu.style.left = '-250px';
+			}
+		}
+	}
+</script>
+
+<style lang="scss">
+	header{
+		p:nth-child(1){
+			display: none;
+		}
+		p{
+			float: left;
+			font-weight: bold;
+			margin: 0;
+			padding: 15px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#menu{
+			margin: 0;
+			padding: 0;
+			width: 50%;
+			float: right;
+			list-style: none;
+			text-align: right;
+			// importante para el menu
+			transition: all 0.5s ease;
+			li{
+				display: inline-block;
+				a{
+					color: #fff;
+					text-decoration: none;
+					display: inline-block;
+					padding: 15px;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
+					transition: all 0.4s ease;
+
+				}
+				a:hover, .router-link-active{
+					background: rgba(0,0,0,0.5);
+				}
+			}
+			li:nth-child(1){
+				display: none;
+			}
+		}
+	}
+
+	@media only screen and (max-width : 600px) {
+		header{
+			p:nth-child(1){
+				display: block;
+				cursor: pointer;
+			}
+			#menu{
+				top: 0;
+				// overflow-y: scroll;
+				padding: 0;
+				left: -250px;
+				width: 230px;
+				height: 100%;
+				position: fixed;
+				text-align: left;
+				background: #2C3E50;
+				-webkit-box-shadow: 6px 4px 5px -5px rgba(0,0,0,0.75);
+				-moz-box-shadow: 6px 4px 5px -5px rgba(0,0,0,0.75);
+				box-shadow: 6px 4px 5px -5px rgba(0,0,0,0.75);
+				li{
+					display: block;
+					a{
+						width: 100%;
+					}
+				}
+				li:nth-child(1){
+					display: block;
+					padding: 15px;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;	
+				}
+			}
+		}
+		
+	}
+</style>
