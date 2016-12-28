@@ -40,7 +40,7 @@
 			},
 			closeMenu(){
 				var menu =  document.getElementById('menu');
-				menu.style.left = '-230px';
+				menu.style.left = '-250px';
 			}
 		}
 	}	
@@ -68,6 +68,7 @@
 				float: right;
 				list-style: none;
 				text-align: right;
+				// importante para el menu
 				transition: all 0.5s ease;
 				li{
 					display: inline-block;
@@ -93,7 +94,7 @@
 		}
 
 
-
+		// cuando sea movil
 		@media only screen and (max-width : 600px) {
 			header{
 				p:nth-child(1){
@@ -102,13 +103,16 @@
 				}
 				ul{
 					top: 0;
-					left: -230px;
-					width: 230px;
 					padding: 0;
+					left: -250px;
+					width: 230px;
 					height: 100%;
 					position: fixed;
 					text-align: left;
 					background: #2C3E50;
+					-webkit-box-shadow: 6px 4px 5px -5px rgba(0,0,0,0.75);
+					-moz-box-shadow: 6px 4px 5px -5px rgba(0,0,0,0.75);
+					box-shadow: 6px 4px 5px -5px rgba(0,0,0,0.75);
 					li{
 						display: block;
 						a{
