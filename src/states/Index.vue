@@ -12,7 +12,6 @@
 		</div>
 
 
-
 		<!-- pie de pagina -->
 		<footer>
 			<div class="container">
@@ -37,6 +36,10 @@
 	#state-index{
 		.cont-body{
 			background: #fff;
+			padding: 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
 		}
 
 	}
