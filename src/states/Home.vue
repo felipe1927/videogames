@@ -20,17 +20,16 @@
 			<div class="col-md-4">
 				<titulos name="Proximos juegos" icon="glyphicon-fire"></titulos>
 				<div class="panels proximos_juegos">
-					<div v-for="item in proximosJuegos">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="imagen"></div>
-							</div>
-							<div class="col-md-8">
-								<div class="titulo">{{ item.titulo }}</div>
-								{{ item.resumen }}
-							</div>
+					<div class="media" v-for="item in proximosJuegos">
+						<div class="media-left">
+							<a href="#">
+								<img class="media-object" src="../assets/WALL2.png" width="90">
+							</a>
 						</div>
-						<hr>
+						<div class="media-body">
+							<h4 class="media-heading">{{ item.titulo }}</h4>
+							{{ item.resumen }}
+						</div>
 					</div>
 				</div>
 
@@ -59,8 +58,8 @@
 		data () {
 			return {
 				proximosJuegos:[
-					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolore, similique velit. Modi explicabo harum inventore quibusdam error iusto atque quo debitis, in labore...'},
-					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolore, similique velit. Modi explicabo harum inventore quibusdam error iusto atque quo debitis, in labore...'},
+					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolore, similique velit. Modi explicabo harum inventore quibusdam error...'},
+					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolore, similique velit. Modi explicabo harum inventore quibusdam error...'},
 				]
 			}
 		}
@@ -89,6 +88,17 @@
 				border-bottom: 1px solid #414141;
 				margin-bottom: 5px;
 				font-weight: bold;
+			}
+		}
+
+
+		@media only screen and (max-width : 600px) {
+			.proximos_juegos{
+				.imagen{
+					width: 50%;
+					height: 100px;
+					margin: 5px auto;
+				}
 			}
 		}
 	}	
