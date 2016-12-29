@@ -9,16 +9,24 @@
 				<br>
 
 				<!-- Ultimas noticias -->
-				<div class="titulos">class="titulos"</div>
+				<titulos name="Últimas noticias"></titulos>
 				<div class="panels">
 					class="panels"
 				</div>
 			</div>
+			
 
 
 
 			<div class="col-md-4">
-				<div class="titulos">Texto</div>
+				<titulos name="Últimos lanzamientos"></titulos>
+				<div class="panels">
+					arreglo
+				</div>
+
+				<br>
+
+				<titulos name="Trailers" icon="glyphicon-facetime-video"></titulos>
 				<div class="panels">
 					arreglo
 				</div>

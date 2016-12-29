@@ -17,6 +17,8 @@ const router = new VueRouter({
 // componentes
 import Cabecera from './components/Cabecera.vue'
 Vue.component("cabecera", Cabecera)
+import Titulos from './components/Titulos.vue'
+Vue.component("titulos", Titulos)
 
 
 
