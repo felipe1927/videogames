@@ -18,7 +18,7 @@
 			<br>
 
 			<div class="col-md-4">
-				<titulos name="Últimos lanzamientos"></titulos>
+				<titulos name="Proximos juegos" icon="glyphicon-fire"></titulos>
 				<div class="panels">
 					arreglo
 				</div>
