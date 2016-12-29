@@ -6,6 +6,8 @@
 				<!-- galeria inicial -->
 				<div class="galeria"></div>
 
+				<br>
+
 				<!-- Ultimas noticias -->
 				<div class="titulos">class="titulos"</div>
 				<div class="panels">
@@ -13,7 +15,14 @@
 				</div>
 			</div>
 
-			<div class="col-md-4">ss</div>
+
+
+			<div class="col-md-4">
+				<div class="titulos">Texto</div>
+				<div class="panels">
+					arreglo
+				</div>
+			</div>
 		</div>
 
 
