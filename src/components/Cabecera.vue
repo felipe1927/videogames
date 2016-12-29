@@ -3,7 +3,7 @@
 
 		<div class="container">
 			<p @click="openMenu"><span class="glyphicon glyphicon-menu-hamburger"></span></p>
-			<p>Logo</p>
+			<img src="../assets/icon2.png" width="50">
 
 			<ul id="menu">
 				<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
@@ -45,14 +45,13 @@
 
 <style lang="scss">
 	header{
-		p:nth-child(1){
-			display: none;
-		}
 		p{
-			float: left;
-			font-weight: bold;
 			margin: 0;
+			float: left;
+			display: none;
 			padding: 15px;
+			cursor: pointer;
+			font-weight: bold;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
@@ -71,35 +70,37 @@
 				display: inline-block;
 				a{
 					color: #fff;
-					text-decoration: none;
-					display: inline-block;
 					padding: 15px;
+					display: inline-block;
+					text-decoration: none;
+					transition: all 0.4s ease;
 					-webkit-box-sizing: border-box;
 					-moz-box-sizing: border-box;
 					box-sizing: border-box;
-					transition: all 0.4s ease;
 
 				}
 				a:hover, .router-link-active{
 					background: rgba(0,0,0,0.5);
 				}
 			}
+			// fecha para cerrar el menu
 			li:nth-child(1){
 				display: none;
+				padding: 15px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;	
 			}
 		}
 	}
 
 	@media only screen and (max-width : 600px) {
 		header{
-			p:nth-child(1){
+			p{
 				display: block;
-				cursor: pointer;
 			}
 			#menu{
 				top: 0;
-				// overflow-y: scroll;
-				padding: 0;
 				left: -250px;
 				width: 230px;
 				height: 100%;
@@ -115,12 +116,9 @@
 						width: 100%;
 					}
 				}
+				// felcha para cerrar el menu
 				li:nth-child(1){
 					display: block;
-					padding: 15px;
-					-webkit-box-sizing: border-box;
-					-moz-box-sizing: border-box;
-					box-sizing: border-box;	
 				}
 			}
 		}
