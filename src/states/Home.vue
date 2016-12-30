@@ -19,12 +19,10 @@
 
 			<div class="col-md-4">
 				<titulos name="Proximos juegos" icon="glyphicon-fire"></titulos>
-				<div class="panels proximos_juegos">
+				<div class="panels">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
-							<a href="#">
-								<img class="media-object" src="../assets/WALL2.png" width="90">
-							</a>
+							<img class="media-object" src="../assets/WALL2.png" width="90">
 						</div>
 						<div class="media-body">
 							<h4 class="media-heading">{{ item.titulo }}</h4>
@@ -76,30 +74,9 @@
 			background-size: cover;
 		}
 
-		.proximos_juegos{
-			font-size: 11px;
-			.imagen{
-				width: 100%;
-				height: 80px;
-				background: #414141;
-			}
-			.titulo{
-				width: 100%;
-				border-bottom: 1px solid #414141;
-				margin-bottom: 5px;
-				font-weight: bold;
-			}
-		}
-
 
 		@media only screen and (max-width : 600px) {
-			.proximos_juegos{
-				.imagen{
-					width: 50%;
-					height: 100px;
-					margin: 5px auto;
-				}
-			}
+			
 		}
 	}	
 </style>

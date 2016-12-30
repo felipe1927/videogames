@@ -3,12 +3,14 @@ import VueRouter from 'vue-router'
 
 // creamos los componentes de las  vistas
 import Home from './states/Home.vue'
+import Xbox from './states/Xbox.vue'
 Vue.use(VueRouter)
 
 
 const router = new VueRouter({
 	routes:[
-		{path:'', component: Home}
+		{path:'', component: Home},
+		{path:'/xbox', component: Xbox}
 	]
 })
 

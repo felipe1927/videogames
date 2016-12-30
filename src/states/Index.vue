@@ -7,7 +7,9 @@
 		<!-- cuerpo -->
 		<div class="body">
 			<div class="container cont-body">
-				<router-view></router-view>				
+				<transition>
+					<router-view></router-view>				
+				</transition>
 			</div>
 		</div>
 
