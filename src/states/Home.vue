@@ -10,13 +10,13 @@
 				<br>
 
 				<!-- Top Juegos -->
-				<titulos name="Top Juegos"></titulos>				
+				<titulos name="Top Juegos" icon="glyphicon-paperclip"></titulos>				
 				<div class="panels">
 					<div class="row">
-						<div class="col-md-3 img1"></div>
-						<div class="col-md-3 img2"></div>
-						<div class="col-md-3 img3"></div>
-						<div class="col-md-3 img4"></div>
+						<div class="col-md-3 top img1"></div>
+						<div class="col-md-3 top img2"></div>
+						<div class="col-md-3 top img3"></div>
+						<div class="col-md-3 top img4"></div>
 					</div>
 				</div>
 
@@ -27,7 +27,7 @@
 				<div class="panels">
 					<div class="row">
 						<div class="col-md-4">
-							<img src="../assets/1.jpg" height="200px" alt="">						
+							<img src="../assets/1.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
 							<h4>Uncharted 4</h4>
@@ -37,7 +37,7 @@
 
 					<div class="row">
 						<div class="col-md-4">
-							<img src="../assets/2.jpg" height="200px" alt="">						
+							<img src="../assets/2.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
 							<h4>GT Sport</h4>
@@ -47,7 +47,7 @@
 
 					<div class="row">
 						<div class="col-md-4">
-							<img src="../assets/3.jpg" height="200px" alt="">						
+							<img src="../assets/3.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
 							<h4>FIFA 17</h4>
@@ -57,19 +57,18 @@
 
 					<div class="row">
 						<div class="col-md-4">
-							<img src="../assets/4.jpg" height="200px" alt="">						
+							<img src="../assets/4.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
 							<h4>Battlefield 1</h4>
 						</div>
 					</div>
-					<hr>
-
 				</div>
 			</div>
 			
 			<br>
-
+			
+			<!-- segunda columna -->
 			<div class="col-md-4">
 				<titulos name="Proximos juegos" icon="glyphicon-fire"></titulos>
 				<div class="panels proximos">
@@ -117,7 +116,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	#state-home{
 		.galeria{
 			width: 100%;
@@ -136,36 +135,30 @@
 			color: #2C3E50;
 		}
 
-		.img1{
-			background-image: url(../assets/5.jpg);
-			background-size: cover;
+		.top{
 			width: 119px;
 			height: 150px;
 			margin: 30px;
+		}
+
+		.img1{
+			background-image: url(../assets/5.jpg);
+			background-size: cover;
 		}
 
 		.img2{
 			background-image: url(../assets/6.jpg);
 			background-size: cover;
-			width: 119px;
-			height: 150px;
-			margin: 30px;
 		}
 
 		.img3{
 			background-image: url(../assets/7.png);
 			background-size: cover;
-			width: 119px;
-			height: 150px;
-			margin: 30px;
 		}
 
 		.img4{
 			background-image: url(../assets/8.png);
 			background-size: cover;
-			width: 119px;
-			height: 150px;
-			margin: 30px;
 		}
 
 		@media only screen and (max-width : 600px) {

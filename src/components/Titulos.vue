@@ -13,20 +13,20 @@
 
 <style>
 	.titulos{
+		color: #fff;
+		width: 100%;
+		padding: 10px;
+		background: #2C3E50;
 		border-radius: 10px;
 		margin-bottom: 15px;
-		width: 100%;
-		background: #2C3E50;
-		color: #fff;
 		border: 1px solid #26C6DA; 
-		padding: 10px;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
 	}
-	.red{background: #C62828;color:#f5f5f5;}
 	.blue{background: blue;}
 	.yellow{background: yellow;}
+	.red{background: #C62828; color:#f5f5f5;}
 
 	
 </style>
