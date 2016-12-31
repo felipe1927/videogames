@@ -8,7 +8,7 @@
 		<div class="body">
 			<div class="container cont-body">
 				<transition>
-					<router-view></router-view>				
+					<router-view></router-view>
 				</transition>
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 		<!-- pie de pagina -->
 		<footer>
 			<div class="container">
-				<h2>footer</h2>
+				<p class="textofooter" align="center">© JuegAdictos 2016 Todos los Derechos Reservados</p>
 			</div>
 		</footer>
 	</div>
@@ -42,6 +42,12 @@
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
+		}
+
+		.textofooter{
+			padding:20px;
+			color: #fafafa;
+			font-size: 18px;
 		}
 
 	}

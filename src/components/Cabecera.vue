@@ -45,6 +45,8 @@
 
 <style lang="scss">
 	header{
+		background: #2c3e50;
+		color: #fff;
 		p{
 			margin: 0;
 			float: left;

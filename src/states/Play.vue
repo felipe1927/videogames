@@ -1,7 +1,7 @@
 <template>
-	<div id="state-xbox">
-		<barra class="xbox"></barra>
-		Soy un xbox
+	<div id="state-ps">
+		<barra class="ps"></barra>
+		Soy PlayStation
 	</div>
 </template>
 
@@ -12,7 +12,7 @@
 </script>
 
 <style lang="scss">
-	#state-xbox{
+	#state-ps{
 		
 	}
 </style>

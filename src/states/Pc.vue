@@ -1,7 +1,7 @@
 <template>
-	<div id="state-xbox">
-		<barra class="xbox"></barra>
-		Soy un xbox
+	<div id="state-pc">
+		<barra class="pc"></barra>
+		Soy un pc
 	</div>
 </template>
 
@@ -12,7 +12,7 @@
 </script>
 
 <style lang="scss">
-	#state-xbox{
+	#state-pc{
 		
 	}
 </style>
