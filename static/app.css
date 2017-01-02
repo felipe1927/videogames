@@ -25,6 +25,10 @@
 	box-sizing: border-box;
 }
 
+.row{
+	margin: 0;
+}
+
 
 /* todo lo del pie de pagina */
 footer {
