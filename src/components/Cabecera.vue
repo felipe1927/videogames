@@ -25,7 +25,8 @@
 					{to:'/',name: 'Inicio'},
 					{to:'/xbox',name: 'Xbox'},
 					{to:'/play',name: 'Play'},
-					{to:'/pc',name: 'Pc'}
+					{to:'/pc',name: 'Pc'},
+					{to:'/comunidad',name: 'Comunidad'},
 				],
 			}
 		},
