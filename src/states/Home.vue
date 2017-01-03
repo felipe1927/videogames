@@ -36,6 +36,16 @@
 						<hr>
 					</div>
 				</div>
+				<br>
+
+				<!-- Tabs -->
+				<ul class="nav nav-tabs">
+					<li role="presentation"><router-link to="/" exact>Avances</router-link></li>
+					<li role="presentation"><router-link to="/articulos" exact>Articulos</router-link></li>
+				</ul>
+				<br>
+
+				<router-view></router-view>
 			</div>
 			
 			<br>
@@ -122,6 +132,17 @@
 				width: 119px;
 				height: 150px;
 				margin: 10px auto;
+			}
+		}
+
+		// tabs
+		.nav{
+			.router-link-active{
+				color: #555;
+				cursor: default;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				border-bottom-color: transparent;
 			}
 		}
 	}	
