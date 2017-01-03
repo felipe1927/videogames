@@ -57,15 +57,15 @@
 					<thead>
 						<tr class="bold">
 							<td>#</td>
-							<td>Juegos</td>
-							<td>Calificacion</td>
+							<td>Categoría</td>
+							<td>Nombre</td>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>1</td>
-							<td>test</td>
-							<td>test</td>
+							<td>item 1</td>
+							<td>Battlefield 1</td>
 						</tr>
 					</tbody>
 				</table>
