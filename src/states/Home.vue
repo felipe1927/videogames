@@ -19,7 +19,8 @@
 						<div class="col-md-3 top"><img src="../assets/8.png"></div>
 					</div>
 				</div>
-				<br>
+
+				<br><br>
 
 				<!-- Ultimas noticias -->
 				<titulos name="Últimas noticias"></titulos>
@@ -156,7 +157,7 @@
 		.proximos{
 			background:#F2F2F2;
 		}
-
+		
 		.noticias{
 			p:nth-child(2){
 				color: blue;
