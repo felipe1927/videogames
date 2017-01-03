@@ -40,15 +40,17 @@
 
 				<!-- Tabs -->
 				<ul class="nav nav-tabs">
-					<li role="presentation"><router-link to="/" exact>Avances</router-link></li>
-					<li role="presentation"><router-link to="/articulos" exact>Articulos</router-link></li>
+					<li role="presentation" v-for="tab in tabs">
+						<router-link :to="tab.to" exact>{{ tab.name }}</router-link>
+					</li>
 				</ul>
 				<br>
-
 				<router-view></router-view>
 			</div>
 			
 			<br>
+			
+
 			
 			<!-- segunda columna -->
 			<div class="col-md-4">
@@ -97,12 +99,18 @@
 				proximosJuegos:[
 					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'},
 					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'},
+					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'}
 				],
 				noticias:[
 					{titulo: 'Noticia 1'},
-					{titulo: 'Noticia 2'},
-					{titulo: 'Noticia 3'}
+					{titulo: 'Noticia 2'}
 				],
+				tabs:[
+					{to:'/', name:'Avances'},
+					{to:'/articulos', name:'Artículos'},
+					{to:'/guias', name:'Guías'},
+					{to:'/categorias', name:'Categorías'}
+				]
 			}
 		}
 	}

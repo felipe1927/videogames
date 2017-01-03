@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+
+
 // creamos los componentes de las  vistas
-import Home from './states/Home.vue'
 import Xbox from './states/Xbox.vue'
 import Play from './states/Play.vue'
 import Pc from './states/Pc.vue'
 
-import tabAvance from './states/tabsHome/Avances.vue'
-import tabArticulos from './states/tabsHome/Articulos.vue'
+// tabs de home
+import Home from './states/Home.vue'
+	import tabAvance from './states/tabsHome/Avances.vue'
+	import tabArticulos from './states/tabsHome/Articulos.vue'
+	import tabGuias from './states/tabsHome/Guias.vue'
+	import tabCategorias from './states/tabsHome/Categorias.vue'
+
+
 Vue.use(VueRouter)
 
 
@@ -17,6 +24,8 @@ const router = new VueRouter({
 		{path:'', component: Home, children:[
 			{path:'/', component: tabAvance},
 			{path:'/articulos', component: tabArticulos},
+			{path:'/guias', component: tabGuias},
+			{path:'/categorias', component: tabCategorias}
 		]},
 
 		{path:'/xbox', component: Xbox},
@@ -34,6 +43,8 @@ import Titulos from './components/Titulos.vue'
 Vue.component("titulos", Titulos)
 import Barra from './components/Barra.vue'
 Vue.component("barra", Barra)
+
+
 
 
 
