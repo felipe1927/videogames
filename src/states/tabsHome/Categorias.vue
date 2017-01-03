@@ -4,7 +4,7 @@
 		<div>
 			<div class="item" v-for="categoria in categorias">
 				<div class="icono"><i class="material-icons">{{ categoria.icon }}</i></div>
-				<div class="texto">{{ categoria.name }}</div>
+				<div class="texto"><a href="">{{ categoria.name }}</a></div>
 			</div>
 		</div>
 

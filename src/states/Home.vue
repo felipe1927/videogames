@@ -60,10 +60,10 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>item 1</td>
-							<td>Battlefield 1</td>
+						<tr v-for="item in tabla">
+							<td>{{ item.id }}</td>
+							<td>{{ item.categoria }}</td>
+							<td>{{ item.nombre }}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -137,6 +137,12 @@
 					{to:'/articulos', name:'Artículos'},
 					{to:'/guias', name:'Trucos y Guías'},
 					{to:'/categorias', name:'Categorías'}
+				],
+				tabla:[
+					{id:'1', categoria: 'Accion', nombre: 'Item 1'},
+					{id:'2', categoria: 'Accion', nombre: 'Item 2'},
+					{id:'3', categoria: 'Accion', nombre: 'Item 3'},
+					{id:'4', categoria: 'Accion', nombre: 'Item 4'},
 				]
 			}
 		}
