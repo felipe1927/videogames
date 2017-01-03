@@ -65,7 +65,7 @@
 			left: 0;
 			top: 100px;
 			width: 60px;
-			position: fixed;		
+			position: fixed;
 			.redes{
 				margin: 5px;
 				color: #fff;
@@ -79,6 +79,9 @@
 				border-radius: 100%;
 				text-decoration: none;
 				background-color: #ddd;
+				-webkit-box-shadow: 3px 4px 5px -3px rgba(0,0,0,0.75);
+				-moz-box-shadow: 3px 4px 5px -3px rgba(0,0,0,0.75);
+				box-shadow: 3px 4px 5px -3px rgba(0,0,0,0.75);
 			}
 			.face{background-color: #3B5998;}
 			.insta{background-color: #125688;}

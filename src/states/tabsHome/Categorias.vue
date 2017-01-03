@@ -16,10 +16,10 @@
 		data () {
 			return{
 				categorias:[
-					{name:'item 1', icon:'star'},
-					{name:'item 2', icon:'star'},
-					{name:'item 3', icon:'star'},
-					{name:'item 4', icon:'star'}
+					{name:'Acción', icon:'star'},
+					{name:'Aventura', icon:'star'},
+					{name:'Deportes', icon:'star'},
+					{name:'Carreras', icon:'star'}
 				]
 			}
 		}

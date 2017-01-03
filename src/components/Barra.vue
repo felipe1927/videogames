@@ -1,5 +1,5 @@
 <template>
-	<div :class="['barra', color]" style="background:color;">
+	<div :class="['barra', color]">
 	</div>	
 </template>
 
@@ -9,7 +9,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.barra{
 		width: 100%;
 		height: 6px;

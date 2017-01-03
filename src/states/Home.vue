@@ -48,6 +48,7 @@
 				<router-view></router-view>
 				
 				<br>
+				
 				<!-- Calificacion de juegos -->
 				<titulos name="Juegos según su calificación" icon="glyphicon-star-empty"></titulos>
 				<table class="table table-striped">
@@ -106,6 +107,12 @@
 					</a>
 				</div>
 			</div>
+		</div>
+		
+		<!-- ultimo video -->
+		<div class="ultimo_video">
+			<p>Video del momento</p>
+			<iframe src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 
 
@@ -179,6 +186,37 @@
 				background-color: #fff;
 				border: 1px solid #ddd;
 				border-bottom-color: transparent;
+			}
+		}
+
+		// ulimo video
+		.ultimo_video{
+			width: 100%;
+			padding: 10px;
+			text-align: center;
+			background: #212121;
+			border-radius: 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			p{
+				color: #fff;
+				font-size: 25px;
+				font-weight: bold;
+			}
+			iframe{
+				width: 60%;
+				height: 400px;
+				border-radius: 10px;
+			}
+		}
+
+		@media only screen and (max-width : 600px) {
+			.ultimo_video{
+				iframe{
+					width: 100%;
+					height: 315px;
+				}
 			}
 		}
 	}	
