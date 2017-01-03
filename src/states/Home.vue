@@ -24,20 +24,17 @@
 
 				<!-- Ultimas noticias -->
 				<titulos name="Últimas noticias"></titulos>
-				<div class="panels noticias">
-					<div v-for="item in noticias">
-						<div class="row">
-							<div class="col-md-4">
-								<img src="../assets/1.jpg" height="200px">
-							</div>
-							<div class="col-md-8">
-								<h4><b>{{ item.titulo }}</b></h4>
-								<p>Fecha: 03/01/2017 - hora: 00:00pm</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus.</p>
-								<p>Xbox / Play / Pc</p>
-							</div>
+				<div class="panels">
+					<div v-for="item in noticias" class="row noticias">
+						<div class="col-md-4">
+							<img src="../assets/1.jpg" height="200px">
 						</div>
-						<hr>
+						<div class="col-md-8">
+							<h4><b>{{ item.titulo }}</b></h4>
+							<p>Fecha: 03/01/2017 - hora: 00:00pm</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus.</p>
+							<p>Xbox / Play / Pc</p>
+						</div>
 					</div>
 				</div>
 				<br>
@@ -52,6 +49,7 @@
 				<router-view></router-view>
 				
 				<br>
+				
 				<!-- Calificacion de juegos -->
 				<titulos name="Juegos según su calificación" icon="glyphicon-star-empty"></titulos>
 				<table class="table table-striped">
@@ -63,10 +61,10 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-							<td>item 1</td>
-							<td>Battlefield 1</td>
+						<tr v-for="item in tabla">
+							<td>{{ item.id }}</td>
+							<td>{{ item.categoria }}</td>
+							<td>{{ item.nombre }}</td>
 						</tr>
 					</tbody>
 				</table>
@@ -111,6 +109,12 @@
 				</div>
 			</div>
 		</div>
+		
+		<!-- ultimo video -->
+		<div class="ultimo_video">
+			<p>Video del momento</p>
+			<iframe src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
 
 
 	</div>
@@ -134,6 +138,12 @@
 					{to:'/articulos', name:'Artículos'},
 					{to:'/guias', name:'Trucos y Guías'},
 					{to:'/categorias', name:'Categorías'}
+				],
+				tabla:[
+					{id:'1', categoria: 'Accion', nombre: 'Item 1'},
+					{id:'2', categoria: 'Accion', nombre: 'Item 2'},
+					{id:'3', categoria: 'Accion', nombre: 'Item 3'},
+					{id:'4', categoria: 'Accion', nombre: 'Item 4'},
 				]
 			}
 		}
@@ -150,15 +160,14 @@
 			background-size: cover;
 		}
 
-		hr{
-			border-top: 1px dashed #757575;
-		}
-
 		.proximos{
 			background:#F2F2F2;
 		}
 		
 		.noticias{
+			padding-bottom: 10px;
+			margin-bottom: 10px;
+			border-bottom: 1px dashed #757575;
 			p:nth-child(2){
 				color: blue;
 			}
@@ -184,6 +193,37 @@
 				background-color: #fff;
 				border: 1px solid #ddd;
 				border-bottom-color: transparent;
+			}
+		}
+
+		// ulimo video
+		.ultimo_video{
+			width: 100%;
+			padding: 10px;
+			text-align: center;
+			background: #212121;
+			border-radius: 10px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			p{
+				color: #fff;
+				font-size: 25px;
+				font-weight: bold;
+			}
+			iframe{
+				width: 60%;
+				height: 400px;
+				border-radius: 10px;
+			}
+		}
+
+		@media only screen and (max-width : 600px) {
+			.ultimo_video{
+				iframe{
+					width: 100%;
+					height: 315px;
+				}
 			}
 		}
 	}	

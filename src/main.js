@@ -7,6 +7,7 @@ import VueRouter from 'vue-router'
 import Xbox from './states/Xbox.vue'
 import Play from './states/Play.vue'
 import Pc from './states/Pc.vue'
+import Comunidad from './states/Comunidad.vue'
 
 // tabs de home
 import Home from './states/Home.vue'
@@ -30,7 +31,8 @@ const router = new VueRouter({
 
 		{path:'/xbox', component: Xbox},
 		{path:'/play', component: Play},
-		{path:'/pc', component: Pc}
+		{path:'/pc', component: Pc},
+		{path:'/comunidad', component: Comunidad}
 	]
 })
 

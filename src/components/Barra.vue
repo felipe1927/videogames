@@ -1,5 +1,5 @@
 <template>
-	<div :class="['barra', color]" style="background:color;">
+	<div :class="['barra', color]">
 	</div>	
 </template>
 
@@ -9,10 +9,10 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.barra{
 		width: 100%;
-		height: 4px;
+		height: 6px;
 		position: absolute;
 		top: 50px;
 		left: 0
@@ -22,6 +22,7 @@
 	.xbox{background: #107c10;}
 	.ps{background: #003791;}
 	.pc{background: #C62828;}
+	.comunidad{background: #18FFFF;}
 	
 
 	

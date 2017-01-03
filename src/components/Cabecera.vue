@@ -25,10 +25,18 @@
 		data () {
 			return {
 				menu: [
+<<<<<<< HEAD
 					{to:'/',name: 'Inicio', src:'../assets/pc1.png'},
 					{to:'/xbox',name: 'XOne', src:'../assets/pc1.png'},
 					{to:'/play',name: 'PS4', src:'../assets/pc1.png'},
 					{to:'/pc',name: 'PC', src:'../assets/pc1.png'}
+=======
+					{to:'/',name: 'Inicio'},
+					{to:'/xbox',name: 'Xbox'},
+					{to:'/play',name: 'Play'},
+					{to:'/pc',name: 'Pc'},
+					{to:'/comunidad',name: 'Comunidad'},
+>>>>>>> 1dd37c9b4787918260f7075dd1a828d293f8f5e3
 				],
 			}
 		},

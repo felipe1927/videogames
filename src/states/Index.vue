@@ -72,10 +72,30 @@
 			left: 0;
 			top: 100px;
 			width: 60px;
+<<<<<<< HEAD
 			position: fixed;		
 			a{
 				text-align: center;
 				font-size: 22px;
+=======
+			position: fixed;
+			.redes{
+				margin: 5px;
+				color: #fff;
+				width: 40px;
+				height: 40px;
+				padding: 10px;
+				display: block;
+				line-height: 22px;
+				font-weight: bold;
+				text-align: center;
+				border-radius: 100%;
+				text-decoration: none;
+				background-color: #ddd;
+				-webkit-box-shadow: 3px 4px 5px -3px rgba(0,0,0,0.75);
+				-moz-box-shadow: 3px 4px 5px -3px rgba(0,0,0,0.75);
+				box-shadow: 3px 4px 5px -3px rgba(0,0,0,0.75);
+>>>>>>> 1dd37c9b4787918260f7075dd1a828d293f8f5e3
 			}
 			.icon-button{
 				background-color:#fff;

@@ -4,7 +4,7 @@
 		<div>
 			<div class="item" v-for="categoria in categorias">
 				<div class="icono"><i class="material-icons">{{ categoria.icon }}</i></div>
-				<div class="texto">{{ categoria.name }}</div>
+				<div class="texto"><a href="">{{ categoria.name }}</a></div>
 			</div>
 		</div>
 
@@ -16,10 +16,10 @@
 		data () {
 			return{
 				categorias:[
-					{name:'item 1', icon:'star'},
-					{name:'item 2', icon:'star'},
-					{name:'item 3', icon:'star'},
-					{name:'item 4', icon:'star'}
+					{name:'Acción', icon:'star'},
+					{name:'Aventura', icon:'star'},
+					{name:'Deportes', icon:'star'},
+					{name:'Carreras', icon:'star'}
 				]
 			}
 		}
