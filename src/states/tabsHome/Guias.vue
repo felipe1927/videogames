@@ -1,5 +1,5 @@
 <template>
-	<div id="state-guias">
+	<div id="state-guias" class="panels">
 		Soy el tab guias, contenido de guias de juegos...
 	</div>
 </template>

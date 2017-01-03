@@ -46,6 +46,26 @@
 				</ul>
 				<br>
 				<router-view></router-view>
+				
+				<br>
+				<!-- Calificacion de juegos -->
+				<titulos name="Juegos según su calificación" icon="glyphicon-star-empty"></titulos>
+				<table class="table table-striped">
+					<thead>
+						<tr class="bold">
+							<td>#</td>
+							<td>Juegos</td>
+							<td>Calificacion</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>test</td>
+							<td>test</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			
 			<br>

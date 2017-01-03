@@ -1,5 +1,5 @@
 <template>
-	<div id="state-avances">
+	<div id="state-avances" class="panels">
 		Soy el tab Avances
 	</div>
 </template>

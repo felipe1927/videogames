@@ -1,5 +1,5 @@
 <template>
-	<div id="state-articulos">
+	<div id="state-articulos" class="panels">
 		Soy un tab de articulos...
 	</div>
 </template>
