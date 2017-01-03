@@ -23,14 +23,17 @@
 
 				<!-- Ultimas noticias -->
 				<titulos name="Últimas noticias"></titulos>
-				<div class="panels">
+				<div class="panels noticias">
 					<div v-for="item in noticias">
 						<div class="row">
 							<div class="col-md-4">
 								<img src="../assets/1.jpg" height="200px">
 							</div>
 							<div class="col-md-8">
-								<h4>{{ item.titulo }}</h4>
+								<h4><b>{{ item.titulo }}</b></h4>
+								<p>Fecha: 03/01/2017 - hora: 00:00pm</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus.</p>
+								<p>Xbox / Play / Pc</p>
 							</div>
 						</div>
 						<hr>
@@ -128,7 +131,7 @@
 				tabs:[
 					{to:'/', name:'Avances'},
 					{to:'/articulos', name:'Artículos'},
-					{to:'/guias', name:'Guías'},
+					{to:'/guias', name:'Trucos y Guías'},
 					{to:'/categorias', name:'Categorías'}
 				]
 			}
@@ -152,6 +155,15 @@
 
 		.proximos{
 			background:#F2F2F2;
+		}
+
+		.noticias{
+			p:nth-child(2){
+				color: blue;
+			}
+			p:nth-last-child(1){
+				color: #ccc;
+			}
 		}
 
 		.top{
