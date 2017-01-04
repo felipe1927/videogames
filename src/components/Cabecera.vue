@@ -1,16 +1,16 @@
 <template>
 	<header>
 		<div class="container">
-			<p @click="openMenu"><span class="glyphicon glyphicon-menu-hamburger"></span></p>
+			<p @click="openMenu"><span class="fa fa-bars"></span></p>
 			
 			<img src="static/img/logo.png" width="200">
 
 			<ul id="menu">
-				<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
+				<li @click="closeMenu"><span class="fa fa-chevron-left"></span></li>
 				
 				<li v-for="item in menu" @click="closeMenu">
 					<router-link :to="item.to" exact>
-						<!-- <img :src="item.src" width="19" alt=""> -->
+					<span v-if="item.icon" :class="['fa', item.icon]"></span>
 						{{ item.name }}
 					</router-link>
 				</li>
@@ -29,7 +29,9 @@
 					{to:'/xbox',name: 'XOne', src:'../assets/xone1.png'},
 					{to:'/play',name: 'PS4', src:'../assets/ps1.png'},
 					{to:'/pc',name: 'PC', src:'../assets/pc1.png'},
-					{to:'/comunidad',name: 'Comunidad'}
+					{to:'/comunidad',name: 'Comunidad'},
+					// login falta por definir
+					{to:'/login',icon: 'fa-user-o'}
 				],
 			}
 		},

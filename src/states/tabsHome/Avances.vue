@@ -1,11 +1,11 @@
 <template>
 	<div id="state-avances" class="panels">
-		<h3>Ultimos avances:</h3>
+		<h3>Últimos avances:</h3>
 		<br>
 		
 		<div v-for="avance in avances" class="avances">
 			<div class="img">
-				<images url="static/img/noticias/1.jpg" x="150" y="150"></images>
+				<images url="static/img/noticias/noticia1.jpg" x="150" y="150"></images>
 			</div>
 			<div class="texto">
 				<p><b>{{ avance.titulo }}</b></p>

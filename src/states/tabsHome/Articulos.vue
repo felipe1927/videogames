@@ -1,6 +1,6 @@
 <template>
 	<div id="state-articulos" class="panels">
-		Soy un tab de articulos...
+		Soy un tab de articulos... <ticket name="Articulo" id="articulo"></ticket>
 	</div>
 </template>
 

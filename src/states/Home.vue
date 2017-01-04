@@ -10,7 +10,7 @@
 				<br>
 
 				<!-- Top Juegos -->
-				<titulos name="Juegos del Mes" icon="fa fa-calendar"></titulos>				
+				<titulos name="Top Juegos del Mes" icon="fa-bookmark-o"></titulos>
 				<div class="panels">
 					<div class="row">
 						<div class="col-md-3 top"><img src="static/img/top/5.jpg"></div>
@@ -27,13 +27,14 @@
 				<div class="panels">
 					<div v-for="item in noticias" class="row noticias">
 						<div class="col-md-4">
-							<img src="static/img/noticias/1.jpg" height="200px">
+							<img src="static/img/noticias/noticia1.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
 							<h4><b>{{ item.titulo }}</b></h4>
-							<p>Fecha: 03/01/2017 - hora: 00:00pm</p>
+							<p>03/01/2017, 03:23pm</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus... <a href="">Ver más</a></p>
 							<p>Xbox / Play / Pc</p>
+							<ticket name="Noticia" id="noticia"></ticket>
 						</div>
 					</div>
 				</div>
@@ -51,7 +52,7 @@
 				<br>
 				
 				<!-- Calificacion de juegos -->
-				<titulos name="Juegos según su calificación" icon="glyphicon-star-empty"></titulos>
+				<titulos name="Juegos según su calificación" icon="fa-star-o"></titulos>
 				<table class="table table-striped">
 					<thead>
 						<tr class="bold">
@@ -77,7 +78,7 @@
 			<!-- SEGUNDA COLUMNA -->
 			<div class="col-md-4">
 				<!-- juegos -->
-				<titulos name="Destacados" icon="glyphicon-fire"></titulos>
+				<titulos name="Destacados" icon="fa-bullhorn"></titulos>
 				<div class="panels proximos">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
@@ -92,16 +93,32 @@
 				<br>
 				
 				<!-- trailers -->
-				<titulos name="Trailers" icon="glyphicon-facetime-video"></titulos>
+				<titulos name="Trailers" icon="fa-play"></titulos>
 				<div class="panels">
-					<iframe width="100%" height="186" src="https://www.youtube.com/embed/yYjD78X1d9Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>FIFA 17 | Tráiler Oficial</b> <hr>
+					<iframe width="100%" height="186" src="https://www.youtube.com/embed/W2Wnvvj33Wo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>The Last of US 2 | Tráiler Oficial</b> <hr>
 
 					<iframe width="100%" height="186" src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>Battlefield 1 | Tráiler Oficial</b>
 				</div>
 				<br>
 				
+				<!-- ultimos lanzamientos -->
+				<titulos name="Últimos lanzamientos" icon="fa-flag"></titulos>
+				<div class="panels">
+					<div v-for="imagenes in lanzamientos">
+						<div class="row">
+							<div class="col-md-4 col-xs-4 col-sm-4" v-for="imagen in imagenes">
+								<a href="" :title="imagen.title">
+									<img :src="imagen.img" width="100%">
+								</a>
+							</div>
+						</div>
+						<br>
+					</div>
+				</div>
+				<br>
+				
 				<!-- foros -->
-				<titulos name="Foros" icon="glyphicon-pencil"></titulos>
+				<titulos name="Foros" icon="fa-pencil"></titulos>
 				<div class="list-group">
 					<a href="#" class="list-group-item " v-for="item in noticias">
 						* {{ item.titulo }}
@@ -125,9 +142,9 @@
 		data () {
 			return {
 				proximosJuegos:[
-					{titulo: 'Gravity Rush 2', resumen: 'Lorem ipsum dolor sit amet...', image:"static/img/top/7.jpg"},
-					{titulo: 'Resident Evil VII', resumen: 'Lorem ipsum dolor sit amet...', image:"static/img/top/6.jpg"},
-					{titulo: 'Yakuza 0', resumen: 'Lorem ipsum dolor sit amet...', image:"static/img/top/8.jpg"}
+					{titulo: 'The Last Guardian', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, dolorum?', image:"static/img/top/2.jpg"},
+					{titulo: 'Final Fantasy XV', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consectetur.', image:"static/img/top/4.png"},
+					{titulo: 'Watch Dogs 2', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, unde.', image:"static/img/top/3.jpg"}
 				],
 				noticias:[
 					{titulo: 'Noticia 1'},
@@ -147,6 +164,19 @@
 					{id:'2', categoria: 'Accion', nombre: 'Item 2'},
 					{id:'3', categoria: 'Accion', nombre: 'Item 3'},
 					{id:'4', categoria: 'Accion', nombre: 'Item 4'},
+				],
+
+				lanzamientos:[
+					[
+						{title:'nombre del juego',img:'static/img/top/1.jpg'},
+						{title:'nombre del juego',img:'static/img/top/2.jpg'},
+						{title:'nombre del juego',img:'static/img/top/3.jpg'}
+					],
+					[
+						{title:'nombre del juego',img:'static/img/top/4.png'},
+						{title:'nombre del juego',img:'static/img/top/5.jpg'},
+						{title:'nombre del juego',img:'static/img/top/6.jpg'},
+					],
 				]
 			}
 		}
@@ -158,7 +188,7 @@
 		.galeria{
 			width: 100%;
 			height: 320px;
-			background: url('../assets/wall2.png')center center;
+			background: url('../assets/wall2.jpg')center center;
 			-webkit-background-size: cover;
 			background-size: cover;
 		}
@@ -174,7 +204,7 @@
 			p:nth-child(2){
 				color: blue;
 			}
-			p:nth-last-child(1){
+			p:nth-last-child(2){
 				color: #ccc;
 			}
 		}
@@ -204,11 +234,12 @@
 			width: 100%;
 			padding: 10px;
 			text-align: center;
-			background: #212121;
-			border-radius: 10px;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
+			background: url(../assets/vid.jpg)center center;
+			-webkit-background-size: cover;
+			background-size: cover;
 			p{
 				color: #fff;
 				font-size: 25px;
@@ -216,8 +247,8 @@
 			}
 			iframe{
 				width: 60%;
-				height: 400px;
-				border-radius: 10px;
+				height: 382px;
+				margin-bottom: 50px;
 			}
 		}
 
@@ -225,7 +256,7 @@
 			.ultimo_video{
 				iframe{
 					width: 100%;
-					height: 315px;
+					height: 200px;
 				}
 			}
 		}
