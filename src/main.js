@@ -45,6 +45,10 @@ import Titulos from './components/Titulos.vue'
 Vue.component("titulos", Titulos)
 import Barra from './components/Barra.vue'
 Vue.component("barra", Barra)
+import Ticket from './components/Ticket.vue'
+Vue.component("ticket", Ticket)
+import Images from './components/Images.vue'
+Vue.component("images", Images)
 
 
 

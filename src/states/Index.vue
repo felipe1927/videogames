@@ -5,8 +5,10 @@
 
 		<!-- redes sociales -->
 		<div class="redes_sociales">
-			<div v-for="red in redes_sociales"  :title="red.title">
-				<a :class="['redes', red.clase]" :href="red.url" target="_blank"><i :class="red.icon"></i></a>
+			<div v-for="red in redes_sociales">
+				<a :class="['redes',red.title]" :href="red.url" target="_blank">
+					<i :class="['fa',red.icon]"></i>
+				</a>
 			</div>
 		</div>
 
@@ -35,10 +37,10 @@
 		data () {
 			return{
 				redes_sociales:[
-					{icon:'fa fa-facebook', clase:'facebook', title:'facebook', url:'https://www.facebook.com/'},
-					{icon:'fa fa-instagram', clase:'instagram', title:'instagram', url:'https://www.instagram.com/'},
-					{icon:'fa fa-youtube-play', clase:'youtube', title:'youtube', url:'https://www.youtube.com/'},
-					{icon:'fa fa-twitter', clase:'twitter', title:'twitter', url:'https://www.twitter.com/'}
+					{icon:'fa-facebook', title:'facebook', url:'https://www.facebook.com/'},
+					{icon:'fa-instagram', title:'instagram', url:'https://www.instagram.com/'},
+					{icon:'fa-youtube-play', title:'youtube', url:'https://www.youtube.com/'},
+					{icon:'fa-twitter', title:'twitter', url:'https://www.twitter.com/'}
 				]
 			}
 		},
@@ -74,18 +76,18 @@
 				height: 40px;
 				padding: 10px;
 				display: block;
+				font-size: 19px;
+				background: #ddd;
 				line-height: 22px;
 				text-align: center;
 				border-radius: 100%;
 				text-decoration: none;
-				background-color: #ddd;
-				font-size: 19px;
 				-webkit-transition: all 0.3s;
 				-o-transition: all 0.3s;
 				transition: all 0.3s;
 			}
 			.redes:hover{
-				background-color:#fff;
+				background:#fff;
 			}
 			.facebook{background-color: #3b5998;}.facebook:hover{color:#3b5998;border:1px solid #3b5998;}
 			.instagram{background-color: #000;}.instagram:hover{color:#000;border:1px solid #000;}
