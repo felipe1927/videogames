@@ -231,11 +231,13 @@
 			width: 100%;
 			padding: 10px;
 			text-align: center;
-			background: #212121;
 			border-radius: 10px;
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
+			background: url(../assets/vid.jpg)center center;
+			-webkit-background-size: cover;
+			background-size: cover;
 			p{
 				color: #fff;
 				font-size: 25px;
@@ -245,6 +247,7 @@
 				width: 60%;
 				height: 400px;
 				border-radius: 10px;
+				margin-bottom: 50px;
 			}
 		}
 
