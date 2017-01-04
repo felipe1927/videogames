@@ -31,9 +31,10 @@
 						</div>
 						<div class="col-md-8">
 							<h4><b>{{ item.titulo }}</b></h4>
-							<p><b>Fecha:</b> 03/01/2017 - <b>hora:</b> 00:00pm</p>
+							<p>03/01/2017, 03:23pm</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus... <a href="">Ver más</a></p>
 							<p>Xbox / Play / Pc</p>
+							<ticket name="Noticia" id="noticia"></ticket>
 						</div>
 					</div>
 				</div>
@@ -200,7 +201,7 @@
 			p:nth-child(2){
 				color: blue;
 			}
-			p:nth-last-child(1){
+			p:nth-last-child(2){
 				color: #ccc;
 			}
 		}
