@@ -3,7 +3,7 @@
 	
 		<div>
 			<div class="item" v-for="categoria in categorias">
-				<div class="icono"><i class="material-icons">{{ categoria.icon }}</i></div>
+				<div class="icono"><span :class="['fa', categoria.icon]"></span></div>
 				<div class="texto"><a href="">{{ categoria.name }}</a></div>
 			</div>
 		</div>
@@ -16,10 +16,10 @@
 		data () {
 			return{
 				categorias:[
-					{name:'Acción', icon:'star'},
-					{name:'Aventura', icon:'star'},
-					{name:'Deportes', icon:'star'},
-					{name:'Carreras', icon:'star'}
+					{name:'Acción', icon:'fa-star'},
+					{name:'Aventura', icon:'fa-star'},
+					{name:'Deportes', icon:'fa-star'},
+					{name:'Carreras', icon:'fa-star'}
 				]
 			}
 		}
@@ -42,12 +42,12 @@
 				float: left;
 				width: 40px;
 				height: 40px;
-				line-height: 50px;
+				line-height: 42px;
 				text-align: center;
 				background: #3F51B5;
 				border-radius: 100%;
-				i{
-					font-size: 20px;
+				span{
+					font-size: 15px;
 				}
 			}
 			.texto{

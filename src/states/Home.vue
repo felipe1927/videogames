@@ -10,7 +10,7 @@
 				<br>
 
 				<!-- Top Juegos -->
-				<titulos name="Top Juegos" icon="glyphicon-paperclip"></titulos>				
+				<titulos name="Top Juegos" icon="fa-bookmark-o"></titulos>				
 				<div class="panels">
 					<div class="row">
 						<div class="col-md-3 top"><img src="static/img/top/5.jpg"></div>
@@ -31,7 +31,7 @@
 						</div>
 						<div class="col-md-8">
 							<h4><b>{{ item.titulo }}</b></h4>
-							<p>Fecha: 03/01/2017 - hora: 00:00pm</p>
+							<p><b>Fecha:</b> 03/01/2017 - <b>hora:</b> 00:00pm</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus... <a href="">Ver más</a></p>
 							<p>Xbox / Play / Pc</p>
 						</div>
@@ -51,7 +51,7 @@
 				<br>
 				
 				<!-- Calificacion de juegos -->
-				<titulos name="Juegos según su calificación" icon="glyphicon-star-empty"></titulos>
+				<titulos name="Juegos según su calificación" icon="fa-star-o"></titulos>
 				<table class="table table-striped">
 					<thead>
 						<tr class="bold">
@@ -77,7 +77,7 @@
 			<!-- segunda columna -->
 			<div class="col-md-4">
 				<!-- juegos -->
-				<titulos name="Proximos juegos" icon="glyphicon-fire"></titulos>
+				<titulos name="Próximos juegos" icon="fa-bullhorn"></titulos>
 				<div class="panels proximos">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
@@ -92,7 +92,7 @@
 				<br>
 				
 				<!-- trailers -->
-				<titulos name="Trailers" icon="glyphicon-facetime-video"></titulos>
+				<titulos name="Trailers" icon="fa-play"></titulos>
 				<div class="panels">
 					<iframe width="100%" height="191" src="https://www.youtube.com/embed/yYjD78X1d9Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>FIFA 17 | Tráiler Oficial</b> <hr>
 
@@ -100,8 +100,24 @@
 				</div>
 				<br>
 				
+				<!-- ultimos lanzamientos -->
+				<titulos name="Últimos lanzamientos" icon="fa-flag"></titulos>
+				<div class="panels">
+					<div v-for="imagenes in lanzamientos">
+						<div class="row">
+							<div class="col-md-4 col-xs-4 col-sm-4" v-for="imagen in imagenes">
+								<a href="" :title="imagen.title">
+									<img :src="imagen.img" width="100%">
+								</a>
+							</div>
+						</div>
+						<br>
+					</div>
+				</div>
+				<br>
+				
 				<!-- foros -->
-				<titulos name="Foros" icon="glyphicon-pencil"></titulos>
+				<titulos name="Foros" icon="fa-pencil"></titulos>
 				<div class="list-group">
 					<a href="#" class="list-group-item " v-for="item in noticias">
 						* {{ item.titulo }}
@@ -144,6 +160,19 @@
 					{id:'2', categoria: 'Accion', nombre: 'Item 2'},
 					{id:'3', categoria: 'Accion', nombre: 'Item 3'},
 					{id:'4', categoria: 'Accion', nombre: 'Item 4'},
+				],
+
+				lanzamientos:[
+					[
+						{title:'nombre del juego',img:'static/img/top/5.jpg'},
+						{title:'nombre del juego',img:'static/img/logo2.png'},
+						{title:'nombre del juego',img:'static/img/top/7.png'}
+					],
+					[
+						{title:'nombre del juego',img:'static/img/noticias/4.jpg'},
+						{title:'nombre del juego',img:'static/img/top/7.png'},
+						{title:'nombre del juego',img:'static/img/wall2.png'},
+					],
 				]
 			}
 		}

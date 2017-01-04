@@ -1,6 +1,6 @@
 <template>
 	<div :class="['titulos', clase]">
-		<span :class="['glyphicon', icon ? icon :'glyphicon-info-sign']"></span> 
+		<span :class="['fa', icon ? icon :'fa-exclamation-circle']"></span> 
 		{{ name }}
 	</div>
 </template>
@@ -11,7 +11,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss">
 	.titulos{
 		color: #fff;
 		width: 100%;
@@ -23,6 +23,9 @@
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
+		span{
+			margin-right: 5px;
+		}
 	}
 	.blue{background: blue;}
 	.yellow{background: yellow;}

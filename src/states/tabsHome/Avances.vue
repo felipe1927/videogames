@@ -1,6 +1,6 @@
 <template>
 	<div id="state-avances" class="panels">
-		<h3>Ultimos avances:</h3>
+		<h3>Últimos avances:</h3>
 		<br>
 		
 		<div v-for="avance in avances" class="avances">
