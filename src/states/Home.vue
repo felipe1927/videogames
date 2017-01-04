@@ -32,7 +32,7 @@
 						<div class="col-md-8">
 							<h4><b>{{ item.titulo }}</b></h4>
 							<p>Fecha: 03/01/2017 - hora: 00:00pm</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus... <a href="">Ver más</a></p>
 							<p>Xbox / Play / Pc</p>
 						</div>
 					</div>

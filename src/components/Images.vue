@@ -1,6 +1,6 @@
 <template>
 	<div class="image" 
-		:style="'background: url('+url+')center center;background-size: cover;width:'+x+'px; height:'+y+'px'">
+		:style="'background: url('+url+')center center;background-size: cover;-webkit-background-size: cover;width:'+x+'px; height:'+y+'px'">
 	</div>
 </template>
 

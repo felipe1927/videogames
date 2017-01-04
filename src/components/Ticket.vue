@@ -13,6 +13,7 @@
 		color: #fff;
 		padding: 5px;
 		cursor: default;
+		font-size: 11px;
 		background: #414141;
 		border-radius: 10px;
 	}
