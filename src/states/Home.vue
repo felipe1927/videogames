@@ -10,13 +10,13 @@
 				<br>
 
 				<!-- Top Juegos -->
-				<titulos name="Top Juegos" icon="glyphicon-paperclip"></titulos>				
+				<titulos name="Juegos del Mes" icon="fa fa-calendar"></titulos>				
 				<div class="panels">
 					<div class="row">
 						<div class="col-md-3 top"><img src="static/img/top/5.jpg"></div>
 						<div class="col-md-3 top"><img src="static/img/top/6.jpg"></div>
-						<div class="col-md-3 top"><img src="static/img/top/7.png"></div>
-						<div class="col-md-3 top"><img src="static/img/top/8.png"></div>
+						<div class="col-md-3 top"><img src="static/img/top/7.jpg"></div>
+						<div class="col-md-3 top"><img src="static/img/top/8.jpg"></div>
 					</div>
 				</div>
 
@@ -71,17 +71,17 @@
 			</div>
 			
 			<br>
-			
+
 
 			
-			<!-- segunda columna -->
+			<!-- SEGUNDA COLUMNA -->
 			<div class="col-md-4">
 				<!-- juegos -->
-				<titulos name="Proximos juegos" icon="glyphicon-fire"></titulos>
+				<titulos name="Destacados" icon="glyphicon-fire"></titulos>
 				<div class="panels proximos">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
-							<img class="media-object" src="static/img/top/8.png" width="90">
+							<img class="media-object" src="static/img/top/6.jpg" width="90">
 						</div>
 						<div class="media-body" align="justify">
 							<h4 class="media-heading">{{ item.titulo }}</h4>
@@ -125,7 +125,7 @@
 		data () {
 			return {
 				proximosJuegos:[
-					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'},
+					{titulo: 'Resident Evil VII', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis velit aperiam id fugit quas!'},
 					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'},
 					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'}
 				],
