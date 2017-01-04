@@ -81,7 +81,7 @@
 				<div class="panels proximos">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
-							<img class="media-object" src="../assets/wall2.png" width="90">
+							<img class="media-object" src="static/img/top/8.png" width="90">
 						</div>
 						<div class="media-body" align="justify">
 							<h4 class="media-heading">{{ item.titulo }}</h4>
