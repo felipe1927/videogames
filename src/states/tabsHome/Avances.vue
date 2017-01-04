@@ -10,7 +10,7 @@
 			<div class="texto">
 				<p><b>{{ avance.titulo }}</b></p>
 				<p>04/01/2017</p>
-				<p>{{ avance.resumen }}</p>
+				<p>{{ avance.resumen }}... <a href="">Ver más</a></p>
 				<ticket name="Avance" id="avance"></ticket>
 			</div>
 		</div>
