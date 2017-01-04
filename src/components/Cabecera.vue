@@ -1,16 +1,15 @@
 <template>
 	<header>
-
 		<div class="container">
 			<p @click="openMenu"><span class="glyphicon glyphicon-menu-hamburger"></span></p>
-			<img src="../assets/icon2.png" width="50">
+			<img src="../assets/logo.png" width="200">
 
 			<ul id="menu">
 				<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
 				
 				<li v-for="item in menu" @click="closeMenu">
 					<router-link :to="item.to" exact>
-						<img :src="item.src" width="19" alt="">
+						<!-- <img :src="item.src" width="19" alt=""> -->
 						{{ item.name }}
 					</router-link>
 				</li>
@@ -25,18 +24,11 @@
 		data () {
 			return {
 				menu: [
-<<<<<<< HEAD
-					{to:'/',name: 'Inicio', src:'../assets/pc1.png'},
-					{to:'/xbox',name: 'XOne', src:'../assets/pc1.png'},
-					{to:'/play',name: 'PS4', src:'../assets/pc1.png'},
-					{to:'/pc',name: 'PC', src:'../assets/pc1.png'}
-=======
 					{to:'/',name: 'Inicio'},
-					{to:'/xbox',name: 'Xbox'},
-					{to:'/play',name: 'Play'},
-					{to:'/pc',name: 'Pc'},
-					{to:'/comunidad',name: 'Comunidad'},
->>>>>>> 1dd37c9b4787918260f7075dd1a828d293f8f5e3
+					{to:'/xbox',name: 'XOne', src:'../assets/xone1.png'},
+					{to:'/play',name: 'PS4', src:'../assets/ps1.png'},
+					{to:'/pc',name: 'PC', src:'../assets/pc1.png'},
+					{to:'/comunidad',name: 'Comunidad'}
 				],
 			}
 		},
