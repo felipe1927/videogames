@@ -13,10 +13,10 @@
 				<titulos name="Top Juegos" icon="glyphicon-paperclip"></titulos>				
 				<div class="panels">
 					<div class="row">
-						<div class="col-md-3 top"><img src="../assets/5.jpg"></div>
-						<div class="col-md-3 top"><img src="../assets/6.jpg"></div>
-						<div class="col-md-3 top"><img src="../assets/7.png"></div>
-						<div class="col-md-3 top"><img src="../assets/8.png"></div>
+						<div class="col-md-3 top"><img src="static/img/top/5.jpg"></div>
+						<div class="col-md-3 top"><img src="static/img/top/6.jpg"></div>
+						<div class="col-md-3 top"><img src="static/img/top/7.png"></div>
+						<div class="col-md-3 top"><img src="static/img/top/8.png"></div>
 					</div>
 				</div>
 
@@ -27,7 +27,7 @@
 				<div class="panels">
 					<div v-for="item in noticias" class="row noticias">
 						<div class="col-md-4">
-							<img src="../assets/1.jpg" height="200px">
+							<img src="static/img/noticias/1.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
 							<h4><b>{{ item.titulo }}</b></h4>
@@ -81,7 +81,7 @@
 				<div class="panels proximos">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
-							<img class="media-object" src="../assets/wall2.png" width="90">
+							<img class="media-object" src="static/img/top/8.png" width="90">
 						</div>
 						<div class="media-body" align="justify">
 							<h4 class="media-heading">{{ item.titulo }}</h4>
@@ -155,7 +155,7 @@
 		.galeria{
 			width: 100%;
 			height: 320px;
-			background: url(../assets/wall2.png)center center;
+			background: url('../assets/wall2.png')center center;
 			-webkit-background-size: cover;
 			background-size: cover;
 		}

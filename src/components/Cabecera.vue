@@ -2,7 +2,7 @@
 	<header>
 		<div class="container">
 			<p @click="openMenu"><span class="glyphicon glyphicon-menu-hamburger"></span></p>
-			<img src="../assets/logo.png" width="200">
+			<img src="static/img/logo.png" width="200">
 
 			<ul id="menu">
 				<li @click="closeMenu"><span class="glyphicon glyphicon-arrow-left"></span></li>
