@@ -81,7 +81,7 @@
 				<div class="panels proximos">
 					<div class="media" v-for="item in proximosJuegos">
 						<div class="media-left">
-							<img class="media-object" src="static/img/top/6.jpg" width="90">
+							<img class="media-object" :src="item.image" width="90">
 						</div>
 						<div class="media-body" align="justify">
 							<h4 class="media-heading">{{ item.titulo }}</h4>
@@ -125,13 +125,16 @@
 		data () {
 			return {
 				proximosJuegos:[
-					{titulo: 'Resident Evil VII', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic officiis velit aperiam id fugit quas!'},
-					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'},
-					{titulo: 'Titulo', resumen: 'Lorem ipsum dolor sit amet...'}
+					{titulo: 'Gravity Rush 2', resumen: 'Lorem ipsum dolor sit amet...', image:"static/img/top/7.jpg"},
+					{titulo: 'Resident Evil VII', resumen: 'Lorem ipsum dolor sit amet...', image:"static/img/top/6.jpg"},
+					{titulo: 'Yakuza 0', resumen: 'Lorem ipsum dolor sit amet...', image:"static/img/top/8.jpg"}
 				],
 				noticias:[
 					{titulo: 'Noticia 1'},
-					{titulo: 'Noticia 2'}
+					{titulo: 'Noticia 2'},
+					{titulo: 'Noticia 3'},
+					{titulo: 'Noticia 4'},
+					{titulo: 'Noticia 5'}
 				],
 				tabs:[
 					{to:'/', name:'Avances'},
