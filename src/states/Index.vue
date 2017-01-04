@@ -24,7 +24,6 @@
 		<footer>
 			<div class="container">
 				<p class="textofooter" align="center">© JuegAdictos 2016 Todos los Derechos Reservados</p>
-				<br><br>
 			</div>
 		</footer>
 	</div>

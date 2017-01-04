@@ -20,7 +20,7 @@
 					</div>
 				</div>
 
-				<br><br>
+				<br>
 
 				<!-- Ultimas noticias -->
 				<titulos name="Últimas noticias"></titulos>
@@ -94,9 +94,9 @@
 				<!-- trailers -->
 				<titulos name="Trailers" icon="glyphicon-facetime-video"></titulos>
 				<div class="panels">
-					<iframe width="100%" height="191" src="https://www.youtube.com/embed/yYjD78X1d9Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>FIFA 17 | Tráiler Oficial</b> <hr>
+					<iframe width="100%" height="186" src="https://www.youtube.com/embed/yYjD78X1d9Q?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>FIFA 17 | Tráiler Oficial</b> <hr>
 
-					<iframe width="100%" height="191" src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>Battlefield 1 | Tráiler Oficial</b>
+					<iframe width="100%" height="186" src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>Battlefield 1 | Tráiler Oficial</b>
 				</div>
 				<br>
 				
