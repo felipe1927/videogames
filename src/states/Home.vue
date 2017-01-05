@@ -32,15 +32,6 @@
 					</div>
 				</div>
 
-				<!-- <div class="row" v-for="item in topJuegos" align="justify">
-					<div :class="col-md-4 item.clase">
-						<div class="info">
-							<p class="headline">{{item.titulo}}</p>
-							<p class="headline2">{{item.resumen}}</p>
-						</div>						
-					</div>			
-				</div> -->
-
 				<br>
 
 				<!-- Ultimas noticias -->
@@ -112,6 +103,7 @@
 					</div>
 				</div class="media">
 				<br>
+				
 				
 				<!-- trailers -->
 				<titulos name="Trailers" icon="fa-play"></titulos>
@@ -214,7 +206,7 @@
 		.galeria{
 			width: 100%;
 			height: 320px;
-			background: url('../assets/wall2.jpg')center center;
+			background: url(/static/img/wall2.jpg)center center;
 			-webkit-background-size: cover;
 			background-size: cover;
 		}

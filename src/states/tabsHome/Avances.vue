@@ -5,7 +5,7 @@
 		
 		<div v-for="avance in avances" class="avances">
 			<div class="img">
-				<images url="static/img/noticias/noticia1.jpg" x="150" y="150"></images>
+				<images url="static/img/noticias/noticia1.jpg" x="150px" y="150px"></images>
 			</div>
 			<div class="texto">
 				<p><b>{{ avance.titulo }}</b></p>
