@@ -11,14 +11,35 @@
 
 				<!-- Top Juegos -->
 				<titulos name="Top Juegos del Mes" icon="fa-bookmark-o"></titulos>
-				<div class="panels">
-					<div class="row">
-						<div class="col-md-3 top"><img src="static/img/top/5.jpg"></div>
-						<div class="col-md-3 top"><img src="static/img/top/6.jpg"></div>
-						<div class="col-md-3 top"><img src="static/img/top/7.jpg"></div>
-						<div class="col-md-3 top"><img src="static/img/top/8.jpg"></div>
+				<div class="row" align="justify">
+					<div class="col-md-4 img1">
+						<div class="info">
+							<p class="headline">Uncharted 4</p>
+							<p class="headline2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto id vero quidem commodi placeat in odit aliquid, dolor optio dignissimos.</p>
+						</div>
+					</div>
+					<div class="col-md-4 img2">
+						<div class="info">
+							<p class="headline">Gran Turismo Sport</p>
+							<p class="headline2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda excepturi, maxime rem, debitis temporibus hic. Eum debitis ipsa, a molestiae!</p>
+						</div>
+					</div>
+					<div class="col-md-4 img3">
+						<div class="info">
+							<p class="headline">FIFA 17</p>
+							<p class="headline2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam impedit, at quisquam nam incidunt, eum autem eveniet amet totam architecto!</p>
+						</div>
 					</div>
 				</div>
+
+				<!-- <div class="row" v-for="item in topJuegos" align="justify">
+					<div :class="col-md-4 item.clase">
+						<div class="info">
+							<p class="headline">{{item.titulo}}</p>
+							<p class="headline2">{{item.resumen}}</p>
+						</div>						
+					</div>			
+				</div> -->
 
 				<br>
 
@@ -146,6 +167,11 @@
 					{titulo: 'Final Fantasy XV', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consectetur.', image:"static/img/top/4.png"},
 					{titulo: 'Watch Dogs 2', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, unde.', image:"static/img/top/3.jpg"}
 				],
+				topJuegos:[
+					{titulo:'Uncharted 4', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img1'},
+					{titulo:'Gran Turismo Sport', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img2'},
+					{titulo:'FIFA 17', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img3'}
+				],
 				noticias:[
 					{titulo: 'Noticia 1'},
 					{titulo: 'Noticia 2'},
@@ -195,6 +221,64 @@
 
 		.proximos{
 			background:#F2F2F2;
+		}
+
+		.img1{
+			background-image: url(/static/img/noticias/noticia1.jpg);
+			background-size: cover;
+			height: 230px;
+			padding: 0px;
+		}
+
+		.img2{
+			background-image: url(/static/img/noticias/noticia2.jpg);
+			background-size: cover;
+			height: 230px;
+			padding: 0px;
+		}
+
+		.img3{
+			background-image: url(/static/img/noticias/noticia3.jpg);
+			background-size: cover;
+			height: 230px;
+			padding: 0px;
+		}
+
+		.info{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(31,31,31,0.5);
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			opacity: 0;
+			overflow: hidden;
+			position: absolute;
+		}
+
+		.img1:hover .info, .img2:hover .info, .img3:hover .info {
+			opacity: 1;
+		}
+
+		.headline{
+			position: absolute;
+			color: #fff;
+			padding: 20px;
+			font-size: 18px;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+		}
+
+		.headline2{
+			position: absolute;
+			color: #fff;
+			padding: 20px;
+			font-size: 15px;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			margin-top: 50px;
 		}
 		
 		.noticias{
