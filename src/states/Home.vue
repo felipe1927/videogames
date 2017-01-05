@@ -12,22 +12,10 @@
 				<!-- Top Juegos -->
 				<titulos name="Top Juegos del Mes" icon="fa-bookmark-o"></titulos>
 				<div class="row" align="justify">
-					<div class="col-md-4 img1">
+					<div v-for="top in topJuegos" :class="['col-md-4', top.clase]">
 						<div class="info">
-							<p class="headline">Uncharted 4</p>
-							<p class="headline2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto id vero quidem commodi placeat in odit aliquid, dolor optio dignissimos.</p>
-						</div>
-					</div>
-					<div class="col-md-4 img2">
-						<div class="info">
-							<p class="headline">Gran Turismo Sport</p>
-							<p class="headline2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda excepturi, maxime rem, debitis temporibus hic. Eum debitis ipsa, a molestiae!</p>
-						</div>
-					</div>
-					<div class="col-md-4 img3">
-						<div class="info">
-							<p class="headline">FIFA 17</p>
-							<p class="headline2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam impedit, at quisquam nam incidunt, eum autem eveniet amet totam architecto!</p>
+							<p class="headline">{{ top.titulo }}</p>
+							<p class="headline2">{{ top.resumen }}</p>
 						</div>
 					</div>
 				</div>
@@ -162,7 +150,7 @@
 				topJuegos:[
 					{titulo:'Uncharted 4', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img1'},
 					{titulo:'Gran Turismo Sport', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img2'},
-					{titulo:'FIFA 17', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img3'}
+					{titulo:'FIFA 17', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img3'},
 				],
 				noticias:[
 					{titulo: 'Noticia 1'},
