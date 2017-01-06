@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		
-		<a href="" class="ver_mas">Ver más</a>
+		<router-link to="" class="ver_mas">Ver más</router-link>
 	</div>
 </template>
 
