@@ -10,6 +10,9 @@ import Pc from './states/Pc.vue'
 import Comunidad from './states/Comunidad.vue'
 import Login from './states/Login.vue'
 
+// noticias
+	import NoticiasPost from './states/noticias/NoticiasPost.vue'
+
 // tabs de home
 import Home from './states/Home.vue'
 	import tabAvance from './states/tabsHome/Avances.vue'
@@ -35,6 +38,9 @@ const router = new VueRouter({
 		{path:'/pc', component: Pc},
 		{path:'/comunidad', component: Comunidad},
 		{path:'/login', component: Login},
+
+		// noticias
+		{path:'/noticia/:idnoticia', component: NoticiasPost, name: 'noticiaPost'},
 	]
 })
 

@@ -30,7 +30,11 @@
 							<img src="static/img/noticias/noticia1.jpg" height="200px">
 						</div>
 						<div class="col-md-8">
-							<h4><b>{{ item.titulo }}</b></h4>
+							<h4 class="bold">
+								<router-link :to="{name:'noticiaPost', params:{idnoticia: item.titulo }}">
+									{{ item.titulo }}
+								</router-link>
+							</h4>
 							<p>03/01/2017, 03:23pm</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus... <a href="">Ver más</a></p>
 							<p>Xbox / Play / Pc</p>
@@ -266,6 +270,11 @@
 			padding-bottom: 10px;
 			margin-bottom: 10px;
 			border-bottom: 1px dashed #757575;
+			h4{
+				a{
+					color: #414141;
+				}
+			}
 			p:nth-child(2){
 				color: blue;
 			}
