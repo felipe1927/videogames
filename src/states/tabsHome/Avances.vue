@@ -14,6 +14,8 @@
 				<ticket name="Avance" id="avance"></ticket>
 			</div>
 		</div>
+
+		<a href="" class="ver_mas">Ver más</a>
 		
 	</div>
 </template>

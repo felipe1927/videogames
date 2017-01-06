@@ -27,6 +27,13 @@
 	box-sizing: border-box;
 }
 
+.ver_mas{
+	width: 100%;
+	text-align: center;
+	margin: 5px auto;
+	display: block;
+}
+
 .row{
 	margin: 0;
 }

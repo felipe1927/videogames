@@ -8,7 +8,8 @@
 				<br>
 			</div>
 		</div>
-
+		
+		<a href="" class="ver_mas">Ver más</a>
 	</div>
 </template>
 
