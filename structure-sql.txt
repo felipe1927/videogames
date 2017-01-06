@@ -1,0 +1,43 @@
+noticias:[
+	id_noticia,
+	titulo,
+	img1,
+	parrafo1,
+	img2,
+	parrafo2,
+	video,
+	fecha,
+	hora,
+	categorias: "ej: xbox, play, pc, etc",
+	usuario
+],
+
+avances:[
+	id_avance,
+	titulo,
+	img1,
+	parrafo1,
+	img2,
+	parrafo2,
+	img3,
+	parrafo3,
+	img4,
+	parrafo4,
+	fecha,
+	hora,
+	video,
+	usuario: "quien lo publico"
+]
+
+articulos:[
+	id_articulo,
+	titulo,
+	img1,
+	parrafo1,
+	video,
+	parrafo2,
+	fecha,
+	hora,
+	video,
+	usuario: "quien lo publico"
+]
