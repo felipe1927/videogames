@@ -45,7 +45,7 @@
 					<div class="col-md-2 col-xs-6">
 						<h5><b>ENLACES</b></h5>
 						<ul>
-							<li><a href="#">Resident Evil XV</a></li>
+							<li><a href="#">Resident Evil VII</a></li>
 							<li><a href="#">GTA V</a></li>
 							<li><a href="#">FIFA 17</a></li>
 							<li><a href="#">Battlefield 1</a></li>
@@ -64,6 +64,7 @@
 				</div>
 				<br>
 			</div>
+			<div class="division"></div>
 			<div class="redesfooter">
 				<div class="container">
 					<div class="row">
@@ -163,6 +164,12 @@
 					}
 				}
 			}
+		}
+
+		.division{
+			height: 2px;
+			width: 100%;
+			background:#26C6DA;
 		}
 
 		.redesfooter{
