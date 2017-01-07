@@ -24,8 +24,60 @@
 
 		<!-- pie de pagina -->
 		<footer>
-			<div class="container">
-				<p class="textofooter" align="center">© JuegAdictos 2016 Todos los Derechos Reservados</p>
+			<div class="container textofooter">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="static/img/logo.png" height="50" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam excepturi culpa esse est laborum rem voluptatem cum expedita iusto aliquam quaerat doloremque voluptatibus voluptas soluta dolore, ducimus, nisi et.</p>
+					</div>
+					<div class="col-md-2 col-xs-6">
+						<h5><b>SECCIONES</b></h5>
+						<ul>
+							<li><a href="#">Inicio</a></li>
+							<li><a href="#">Xbox One</a></li>
+							<li><a href="#">Playstation 4</a></li>
+							<li><a href="#">PC</a></li>
+							<li><a href="#">Trailers</a></li>
+							<li><a href="#">Trucos y Guias</a></li>
+							<li><a href="#">Articulos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 col-xs-6">
+						<h5><b>ENLACES</b></h5>
+						<ul>
+							<li><a href="#">Resident Evil XV</a></li>
+							<li><a href="#">GTA V</a></li>
+							<li><a href="#">FIFA 17</a></li>
+							<li><a href="#">Battlefield 1</a></li>
+							<li><a href="#">Uncharted 4</a></li>
+						</ul>
+					</div>
+					<div class="col-md-2 col-xs-6">
+						<h5><b>COMUNIDAD</b></h5>
+						<ul>
+							<li><a href="#">Contacto</a></li>
+							<li><a href="#">Colabora</a></li>
+							<li><a href="#">Redacción</a></li>
+							<li><a href="#">Foros</a></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div class="redesfooter">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<div class="footercopy">© JuegAdictos™ Copyright 2017</div>					
+						</div>
+						<div class="col-md-4 iconsfooter" align="right">
+							<i class="fa fa-facebook"></i>							
+							<i class="fa fa-instagram"></i>							
+							<i class="fa fa-youtube-play"></i>							
+							<i class="fa fa-twitter"></i>							
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -95,9 +147,46 @@
 		}
 
 		.textofooter{
-			padding:20px;
+			padding-top:30px;
 			color: #fafafa;
-			font-size: 18px;
+			text-align:justify;
+			ul{
+				list-style: none;
+				padding:0px;
+				li{
+					a{
+						text-decoration: none;
+						color: #f5f5f5;
+					}
+					a:hover{
+						opacity:0.5;
+					}
+				}
+			}
+		}
+
+		.redesfooter{
+			background-color:#1E2B38;
+			height: 40px;
+			width: 100%;
+			.footercopy{
+				padding:10px;
+				color: #c1c1c1;
+			}
+			.iconsfooter{
+				padding:5px;
+				font-size: 21px;
+				color: #fafafa;
+				i{
+					margin-right: 10px;
+					-webkit-transition: 0.5s;
+					-o-transition: 0.5s;
+					transition: 0.5s;
+				}
+				i:hover{
+					opacity:0.5;
+				}
+			}
 		}
 	}
 		
