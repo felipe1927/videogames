@@ -30,36 +30,13 @@
 						<img src="static/img/logo.png" height="50" alt="">
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam excepturi culpa esse est laborum rem voluptatem cum expedita iusto aliquam quaerat doloremque voluptatibus voluptas soluta dolore, ducimus, nisi et.</p>
 					</div>
-					<div class="col-md-2 col-xs-6">
-						<h5><b>SECCIONES</b></h5>
-						<ul>
-							<li><a href="#">Inicio</a></li>
-							<li><a href="#">Xbox One</a></li>
-							<li><a href="#">Playstation 4</a></li>
-							<li><a href="#">PC</a></li>
-							<li><a href="#">Trailers</a></li>
-							<li><a href="#">Trucos y Guias</a></li>
-							<li><a href="#">Articulos</a></li>
-						</ul>
-					</div>
-					<div class="col-md-2 col-xs-6">
-						<h5><b>ENLACES</b></h5>
-						<ul>
-							<li><a href="#">Resident Evil VII</a></li>
-							<li><a href="#">GTA V</a></li>
-							<li><a href="#">FIFA 17</a></li>
-							<li><a href="#">Battlefield 1</a></li>
-							<li><a href="#">Uncharted 4</a></li>
-						</ul>
-					</div>
-					<div class="col-md-2 col-xs-6">
-						<h5><b>COMUNIDAD</b></h5>
-						<ul>
-							<li><a href="#">Contacto</a></li>
-							<li><a href="#">Colabora</a></li>
-							<li><a href="#">Redacción</a></li>
-							<li><a href="#">Foros</a></li>
-						</ul>
+					<div class="col-md-2 col-xs-6" v-for="item in items">
+						<div v-for="texto in item">
+							<h5><b>{{texto.titulo}}</b></h5>
+							<ul>
+								<li><a href="#">{{texto.link}}</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<br>
@@ -93,6 +70,35 @@
 					{icon:'fa-instagram', title:'instagram', url:'https://www.instagram.com/'},
 					{icon:'fa-youtube-play', title:'youtube', url:'https://www.youtube.com/'},
 					{icon:'fa-twitter', title:'twitter', url:'https://www.twitter.com/'}
+				],
+
+				// links footer
+				items:[
+					[
+						{titulo:'SECCIONES'},
+						{link:'Inicio'},
+						{link:'Xbox One'},
+						{link:'Playstation 4'},
+						{link:'PC'},
+						{link:'Trailers'},
+						{link:'Articulos'},
+						{link:'Trucos'}
+					],
+					[
+						{titulo:'ENLACES'},
+						{link:'Resident Evil VII'},
+						{link:'GTA V'},
+						{link:'FIFA 17'},
+						{link:'Battlefield 1'},
+						{link:'Overwatch'}
+					],
+					[
+						{titulo:'COMUNIDAD'},
+						{link:'Contacto'},
+						{link:'Colabora'},
+						{link:'Redacción'},
+						{link:'Foros'}
+					]
 				]
 			}
 		},
