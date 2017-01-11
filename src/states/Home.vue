@@ -33,7 +33,7 @@
 							<p>{{ noticia.fecha }}</p>
 							<p>
 								{{ noticia.parrafo1 }}... 
-								<router-link :to="{name:'noticiaPost', params:{idnoticia: noticia.titulo }}">ver más</router-link>
+								<router-link :to="{name:'noticiaPost', params:{idnoticia: noticia.id_noticia }}">ver más</router-link>
 							</p>
 							<p>{{ noticia.categorias }}</p>
 							<ticket name="Noticia" id="noticia"></ticket>

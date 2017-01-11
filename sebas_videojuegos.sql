@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-01-2017 a las 20:24:28
+-- Tiempo de generación: 11-01-2017 a las 21:34:32
 -- Versión del servidor: 5.6.21
 -- Versión de PHP: 5.6.3
 
@@ -76,15 +76,15 @@ INSERT INTO `lanzamientos` (`id_lanzamiento`, `titulo`, `img`, `date_lanzamiento
 
 CREATE TABLE IF NOT EXISTS `noticias` (
 `id_noticia` int(11) NOT NULL,
-  `titulo` varchar(250) NOT NULL,
-  `img1` varchar(250) NOT NULL,
-  `parrafo1` varchar(250) NOT NULL,
-  `img2` varchar(250) NOT NULL,
-  `parrafo2` varchar(250) NOT NULL,
-  `video` varchar(250) NOT NULL,
+  `titulo` text,
+  `img1` text,
+  `parrafo1` text,
+  `img2` text,
+  `parrafo2` text,
+  `video` text,
   `fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `hora` time NOT NULL,
-  `categorias` varchar(250) NOT NULL,
+  `categorias` text,
   `usuario` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
@@ -93,10 +93,10 @@ CREATE TABLE IF NOT EXISTS `noticias` (
 --
 
 INSERT INTO `noticias` (`id_noticia`, `titulo`, `img1`, `parrafo1`, `img2`, `parrafo2`, `video`, `fecha`, `hora`, `categorias`, `usuario`) VALUES
-(1, 'primer noticia', 'static/img/noticias/noticia1.jpg', 'parrafo largo', 'null media', 'parrafo largo 2', 'null media', '2017-01-11 10:10:19', '00:00:00', 'Xbox / play / pc /wii', 1),
-(2, 'segunda noticia 2', 'static/img/noticias/noticia2.jpg', 'parrafo largo 1', 'null media', 'parrafo largo 2', 'null media', '2017-01-11 10:16:15', '00:00:00', 'xbox / play', 1),
-(3, 'tercer noticia', 'static/img/noticias/noticia3.jpg', 'larrrgoooooooooooo', 'null', 'largo dos', 'null', '2017-01-11 11:37:32', '00:00:00', 'xbox / play / pc', 1),
-(4, 'test', 'static/img/noticias/noticia4.jpg', 'test', 'null', 'test', 'null', '2017-01-11 11:37:32', '00:00:00', 'test', 1);
+(1, 'primer noticia', 'static/img/noticias/noticia1.jpg', 'parrafo largo', 'static/img/noticias/noticia2.jpg', 'parrafo largo 2...', 'https://www.youtube.com/embed/MCdjXaNL1sQ?rel=0&amp;showinfo=0', '2017-01-11 10:10:19', '00:00:00', 'Xbox / play / pc /wii', 1),
+(2, 'segunda noticia 2', 'static/img/noticias/noticia2.jpg', 'parrafo largo 1', '', 'parrafo largo 2', '', '2017-01-11 10:16:15', '00:00:00', 'xbox / play', 1),
+(3, 'tercer noticia', 'static/img/noticias/noticia3.jpg', 'larrrgoooooooooooo', '', 'largo dos', '', '2017-01-11 11:37:32', '00:00:00', 'xbox / play / pc', 1),
+(4, 'test', 'static/img/noticias/noticia4.jpg', 'test', '', 'test', '', '2017-01-11 11:37:32', '00:00:00', 'test', 1);
 
 -- --------------------------------------------------------
 

@@ -1,17 +1,24 @@
 <template>
 	<div id="state-noticias_post">
-		
 		<div class="row">
 			<div class="col-md-8">
-				<h1>{{ $route.params.idnoticia }}</h1>
-				<div class="fecha"> <span class="fa fa-clock-o"></span> 06/01/2017, 3:55p.m</div>
+				<h1>{{ noticia.titulo }}</h1>
+				<div class="fecha"> <span class="fa fa-clock-o"></span> {{ noticia.fecha }}</div>
 				<hr>
 
 				<!-- imagen -->
-				<img src="static/img/wall2.jpg" width="100%">
-				<br><br>
+				<div>
+					<img :src="noticia.img1" width="100%">
+					<br><br>
+				</div>
+				{{ noticia.parrafo1 }} <hr>
 
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae repellat corporis velit optio odit, mollitia harum deleniti architecto voluptatibus iste reprehenderit temporibus consequuntur omnis delectus unde ab illo amet cum voluptates, cupiditate officia necessitatibus repudiandae! Placeat quia ratione quod, necessitatibus officia sunt impedit magnam error expedita numquam iste, ea? Eos assumenda at, quos nihil delectus ipsum voluptates aut fugit, cum ipsam, harum possimus hic odio? At sunt aliquam quis, exercitationem blanditiis, dicta labore nobis ipsum voluptatem. Nulla, officia, quibusdam. Nemo placeat dolorum, sunt ipsum animi odit quia nihil, doloribus repudiandae rem eius corporis quae, veritatis expedita perferendis omnis libero. Exercitationem.
+				<!-- segundo parrafo -->
+				<div v-show="noticia.img2">
+					<img :src="noticia.img2" width="100%">
+					<br><br>
+				</div>
+				{{ noticia.parrafo2 }}
 			</div>
 
 			<br>
@@ -34,7 +41,8 @@
 				</div>
 
 				<br>
-
+				
+				<!-- compartir noticia -->
 				<titulos name="Compartir en:" icon="fa-share-alt"></titulos>
 				<div class="panels row redes">
 					<div class="col-md-4 col-xs-4 col-sm-4" v-for="red in redes">
@@ -44,7 +52,15 @@
 					</div>
 				</div>
 
-
+				<br>
+				
+				<!-- video -->
+				<div v-show="noticia.video">
+					<titulos name="Video" icon="fa-video-camera"></titulos>
+					<div class="panels">
+						<iframe width="100%" height="215" :src="noticia.video" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
 			</div>
 
 		</div>
@@ -57,6 +73,7 @@
 	export default{
 		data () {
 			return {
+				noticia: [],
 				noticias:[
 					{titulo:'Noticia 2'},
 					{titulo:'Noticia 3'},
@@ -68,6 +85,17 @@
 					{icon:'fa-whatsapp', clase:'whatsapp'}
 				]
 			}
+		},
+		mounted () {
+			var url = "http://localhost/01/videogames/static/core.php/noticias/index/";
+
+			// noticia
+			this.$http.get(url+this.$route.params.idnoticia)
+			.then(response => {
+				return response.json();
+			}).then(datos => {
+				this.noticia = datos;
+			});
 		}
 	}
 </script>

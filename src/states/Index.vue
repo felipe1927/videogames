@@ -203,7 +203,7 @@
 		}
 	}
 		
-		@media only screen and (max-width : 600px) {
+		@media only screen and (max-width : 850px) {
 			.redes_sociales{
 				display: none;
 			}
