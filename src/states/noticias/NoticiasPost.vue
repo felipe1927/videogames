@@ -18,8 +18,24 @@
 
 			<!-- segunda columna -->
 			<div class="col-md-4">
-				<titulos name="Otras cosas"></titulos>
+				<!-- mas noticias -->
+				<titulos name="Otras noticias"></titulos>
+				<div class="panels row">
+					<div class="media noticias" v-for="item in noticias">
+						<div class="media-left">
+							<img class="media-object" src="static/img/noticias/noticia2.jpg" width="90">
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">{{ item.titulo }}</h4>
+							<span class="date">11/01/2017</span> <br>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat beatae expedita vel minima. Quas, culpa!
+						</div>
+					</div>
+				</div>
+
+
 			</div>
+
 		</div>
 		
 		
@@ -28,7 +44,15 @@
 
 <script>
 	export default{
-
+		data () {
+			return {
+				noticias:[
+					{titulo:'Noticia 2'},
+					{titulo:'Noticia 3'},
+					{titulo:'Noticia 4'}
+				]
+			}
+		}
 	}
 </script>
 
@@ -43,6 +67,13 @@
 			-webkit-box-sizing: border-box;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
+		}
+
+		.noticias{
+			font-size: 13px;
+			.date{
+				color: #c1c1c1
+			}
 		}
 	}
 </style>

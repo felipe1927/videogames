@@ -94,7 +94,7 @@
 							{{ item.resumen }}
 						</div>
 					</div>
-				</div class="media">
+				</div>
 				<br>
 				
 				
