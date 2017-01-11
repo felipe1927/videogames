@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-md-8">
 				<h1>{{ $route.params.idnoticia }}</h1>
-				<div class="fecha">06/01/2017, 3:55p.m</div>
+				<div class="fecha"> <span class="fa fa-clock-o"></span> 06/01/2017, 3:55p.m</div>
 				<hr>
 
 				<!-- imagen -->
@@ -33,6 +33,17 @@
 					</div>
 				</div>
 
+				<br>
+
+				<titulos name="Compartir en:" icon="fa-share-alt"></titulos>
+				<div class="panels row redes">
+					<div class="col-md-4 col-xs-4 col-sm-4" v-for="red in redes">
+						<a href="" :class="[red.clase]">
+							<span :class="['fa', red.icon]"></span>
+						</a>
+					</div>
+				</div>
+
 
 			</div>
 
@@ -50,6 +61,11 @@
 					{titulo:'Noticia 2'},
 					{titulo:'Noticia 3'},
 					{titulo:'Noticia 4'}
+				],
+				redes:[
+					{icon:'fa-facebook-square', clase:'face'},
+					{icon:'fa-twitter-square', clase:'twitter'},
+					{icon:'fa-whatsapp', clase:'whatsapp'}
 				]
 			}
 		}
@@ -72,8 +88,24 @@
 		.noticias{
 			font-size: 13px;
 			.date{
-				color: #c1c1c1
+				color: blue;
 			}
+		}
+
+		.redes{
+			font-size: 25px;
+			text-align: center;
+			a{
+				color: #414141;
+				text-decoration: none;
+				span{
+					cursor: pointer;
+					transition: all 0.2s ease;
+				}
+			}
+			.whatsapp:hover{color: green;}
+			.twitter:hover{color: #55ACEE;}
+			.face:hover{color: #3B5998;}
 		}
 	}
 </style>

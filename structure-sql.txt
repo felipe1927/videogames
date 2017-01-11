@@ -41,3 +41,24 @@ articulos:[
 	video,
 	usuario: "quien lo publico"
 ]
+
+trailer:[
+	id_trailer,
+	titulo,
+	src
+]
+
+lanzamientos:[
+	id_lanzamiento,
+	titulo,
+	img,
+	date_lanzamiento
+]
+
+destacados:[
+	id_destacado,
+	titulo,
+	resumen,
+	img,
+	date_destacado
+]

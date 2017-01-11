@@ -1,6 +1,5 @@
 <template>
 	<div id="state-home">
-		
 		<barra class="inicio"></barra>
 		
 		<div class="row">
@@ -25,22 +24,22 @@
 				<!-- Ultimas noticias -->
 				<titulos name="Últimas noticias"></titulos>
 				<div class="panels">
-					<div v-for="item in noticias" class="row noticias">
+					<div v-for="noticia in noticias" class="row noticias">
 						<div class="col-md-4">
-							<img src="static/img/noticias/noticia1.jpg" height="200px">
+							<img :src="noticia.img1" height="200px">
 						</div>
 						<div class="col-md-8">
-							<h4 class="bold">
-								<router-link :to="{name:'noticiaPost', params:{idnoticia: item.titulo }}">
-									{{ item.titulo }}
-								</router-link>
-							</h4>
-							<p>03/01/2017, 03:23pm</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore tempora sed beatae deserunt maxime magnam, quia alias sunt voluptatibus temporibus... <a href="">Ver más</a></p>
-							<p>Xbox / Play / Pc</p>
+							<h4 class="bold">{{ noticia.titulo }}</h4>
+							<p>{{ noticia.fecha }}</p>
+							<p>
+								{{ noticia.parrafo1 }}... 
+								<router-link :to="{name:'noticiaPost', params:{idnoticia: noticia.titulo }}">ver más</router-link>
+							</p>
+							<p>{{ noticia.categorias }}</p>
 							<ticket name="Noticia" id="noticia"></ticket>
 						</div>
 					</div>
+					<!-- ver todas las noticias -->
 					<router-link to="" class="ver_mas">Ver más</router-link>
 				</div>
 				<br>
@@ -85,9 +84,9 @@
 				<!-- juegos -->
 				<titulos name="Destacados" icon="fa-bullhorn"></titulos>
 				<div class="panels proximos">
-					<div class="media" v-for="item in proximosJuegos">
+					<div class="media" v-for="item in destacados">
 						<div class="media-left">
-							<img class="media-object" :src="item.image" width="90">
+							<img class="media-object" :src="item.img" width="90">
 						</div>
 						<div class="media-body" align="justify">
 							<h4 class="media-heading">{{ item.titulo }}</h4>
@@ -101,24 +100,23 @@
 				<!-- trailers -->
 				<titulos name="Trailers" icon="fa-play"></titulos>
 				<div class="panels">
-					<iframe width="100%" height="186" src="https://www.youtube.com/embed/W2Wnvvj33Wo?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>The Last of US 2 | Tráiler Oficial</b> <hr>
-
-					<iframe width="100%" height="186" src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> <br> <b>Battlefield 1 | Tráiler Oficial</b>
+					<div v-for="item in trailers">
+						<iframe width="100%" height="186" :src="item.src" frameborder="0" allowfullscreen></iframe> 
+						<br>
+						<b>{{ item.titulo }}</b>
+						<hr>
+					</div>
 				</div>
 				<br>
 				
 				<!-- ultimos lanzamientos -->
 				<titulos name="Últimos lanzamientos" icon="fa-flag"></titulos>
 				<div class="panels">
-					<div v-for="imagenes in lanzamientos">
-						<div class="row">
-							<div class="col-md-4 col-xs-4 col-sm-4" v-for="imagen in imagenes">
-								<a href="" :title="imagen.title">
-									<img :src="imagen.img" width="100%">
-								</a>
-							</div>
+					<div class="row">
+						<div v-for="lanzamiento in lanzamientos" class="col-md-4 col-xs-4 col-sm-4">
+							<img :src="lanzamiento.img" width="100%" :title="lanzamiento.titulo">
+							<br><br>
 						</div>
-						<br>
 					</div>
 				</div>
 				<br>
@@ -139,7 +137,6 @@
 			<iframe src="https://www.youtube.com/embed/c7nRTF2SowQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 
-
 	</div>
 </template>
 
@@ -147,22 +144,15 @@
 	export default{
 		data () {
 			return {
-				proximosJuegos:[
-					{titulo: 'The Last Guardian', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, dolorum?', image:"static/img/top/2.jpg"},
-					{titulo: 'Final Fantasy XV', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, consectetur.', image:"static/img/top/4.png"},
-					{titulo: 'Watch Dogs 2', resumen: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, unde.', image:"static/img/top/3.jpg"}
-				],
+				noticias: [],
+				trailers: [],
+				lanzamientos: [],
+				destacados:[],
+
 				topJuegos:[
 					{titulo:'Uncharted 4', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img1'},
 					{titulo:'Gran Turismo Sport', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img2'},
 					{titulo:'FIFA 17', resumen:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, laborum, dolore. Illum, soluta, animi! Molestias eum, sapiente deserunt voluptates minus.', clase:'img3'},
-				],
-				noticias:[
-					{titulo: 'Noticia 1'},
-					{titulo: 'Noticia 2'},
-					{titulo: 'Noticia 3'},
-					{titulo: 'Noticia 4'},
-					{titulo: 'Noticia 5'}
 				],
 				tabs:[
 					{to:'/', name:'Avances'},
@@ -175,21 +165,42 @@
 					{id:'2', categoria: 'Accion', nombre: 'Item 2'},
 					{id:'3', categoria: 'Accion', nombre: 'Item 3'},
 					{id:'4', categoria: 'Accion', nombre: 'Item 4'},
-				],
-
-				lanzamientos:[
-					[
-						{title:'nombre del juego',img:'static/img/top/1.jpg'},
-						{title:'nombre del juego',img:'static/img/top/2.jpg'},
-						{title:'nombre del juego',img:'static/img/top/3.jpg'}
-					],
-					[
-						{title:'nombre del juego',img:'static/img/top/4.png'},
-						{title:'nombre del juego',img:'static/img/top/5.jpg'},
-						{title:'nombre del juego',img:'static/img/top/6.jpg'},
-					],
 				]
 			}
+		},
+
+		mounted () {
+			var url = "http://localhost/01/videogames/static/core.php/inicio/";
+			// noticias
+			fetch(url+'noticias')
+			.then(response => response.json())
+			.then(datos => {
+				this.noticias = datos;
+			});
+
+			// trailers
+			fetch(url+'trailers')
+			.then(response => response.json())
+			.then(datos => {
+				this.trailers = datos;
+			});
+
+			// lanzamientos
+			this.$http.get(url+'lanzamientos')
+			.then(response => {
+				return response.json();
+			}).then(datos => {
+				this.lanzamientos = datos;
+			});
+
+			// destacados
+			this.$http.get(url+'destacados')
+			.then(response => {
+				return response.json();
+			}).then(datos => {
+				this.destacados = datos;
+			});
+			
 		}
 	}
 </script>
